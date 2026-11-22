@@ -1,0 +1,2374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario del Desarrollo Infantil — Guía Orientativa (0 a 7 años)</title>
+    <!-- Favicon SVG ilustrado inspirado en la portada del libro "Calendario del Desarrollo Infantil" -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23234266'/%3E%3Cpath d='M12 45 C20 42, 28 43, 32 47 C36 43, 44 42, 52 45 L52 49 C44 46, 36 47, 32 51 C28 47, 20 46, 12 49 Z' fill='%23ffffff'/%3E%3Cpath d='M14 41 C21 38, 28 39, 32 43 C36 39, 43 38, 50 41 L50 44 C43 41, 36 42, 32 46 C28 42, 21 41, 14 44 Z' fill='%23cbd5e1'/%3E%3Ccircle cx='32' cy='15' r='5.5' fill='%23fbbf24'/%3E%3Ccircle cx='20' cy='21' r='4.8' fill='%2338bdf8'/%3E%3Ccircle cx='44' cy='21' r='4.8' fill='%2334d399'/%3E%3Ccircle cx='23' cy='32' r='4.8' fill='%23c084fc'/%3E%3Ccircle cx='41' cy='32' r='4.8' fill='%23fb7185'/%3E%3Ccircle cx='32' cy='26' r='3.5' fill='%23ffffff'/%3E%3Cpath d='M26 39 C26 33, 38 33, 38 39' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round'/%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f4f7fb',
+                            100: '#e6eef7',
+                            600: '#3b6ea5',
+                            700: '#2d5582',
+                            800: '#234266',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para desplazamiento suave, barras de scroll y modo impresión */
+        html {
+            scroll-behavior: smooth;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .timeline-scroll::-webkit-scrollbar {
+            height: 7px;
+        }
+        .timeline-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 9999px;
+        }
+        .timeline-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .timeline-scroll::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            .card-shadow {
+                box-shadow: none !important;
+                border: 1px solid #e2e8f0 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-100 selection:text-brand-800">
+
+    <!-- Banner Superior de Aviso Legal / Disclaimer -->
+    <div id="disclaimerBanner" class="bg-amber-50 border-b border-amber-200/80 text-amber-950 px-4 py-3 text-xs sm:text-sm transition-all">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div class="flex items-start gap-2.5">
+                <svg class="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p class="leading-relaxed">
+                    <strong class="font-semibold">Aviso Importante y Responsabilidad:</strong> Esta herramienta digital está basada exclusivamente en el cuaderno <em>"Calendario del Desarrollo Infantil"</em> de <strong>Margarita Ramos y Jorge Ramos</strong>. Su propósito es <strong>orientativo y educativo</strong> para padres, cuidadores y psicólogos en formación. No constituye un instrumento de diagnóstico clínico. El uso, interpretación o recomendación de esta información es estricta responsabilidad de quien la utiliza o la recomienda.
+                </p>
+            </div>
+            <button type="button" onclick="openDisclaimerModal()" class="no-print shrink-0 text-xs font-semibold text-amber-800 bg-amber-200/70 hover:bg-amber-200 px-3 py-1.5 rounded-lg transition-colors">
+                Leer marco ético completo
+            </button>
+        </div>
+    </div>
+
+    <!-- Encabezado Principal -->
+    <header class="bg-white border-b border-slate-200/80 sticky top-0 z-30 shadow-sm no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <!-- Identidad con Logotipo del Libro -->
+                <div class="flex items-center gap-3.5">
+                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-brand-800 via-brand-700 to-teal-700 p-1.5 flex items-center justify-center shadow-md shadow-brand-800/20 border border-brand-600/30 shrink-0" title="Emblema Calendario del Desarrollo Infantil — 5 Áreas">
+                        <svg viewBox="0 0 64 64" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logotipo Calendario del Desarrollo Infantil">
+                            <!-- Páginas abiertas del cuaderno en la base -->
+                            <path d="M10 47 C19 43.5, 27.5 44.5, 32 49 C36.5 44.5, 45 43.5, 54 47 L54 51.5 C45 48, 36.5 49, 32 53.5 C27.5 49, 19 48, 10 51.5 Z" fill="#FFFFFF"/>
+                            <path d="M12.5 43 C20.5 39.8, 28 40.8, 32 45 C36 40.8, 43.5 39.8, 51.5 43 L51.5 46 C43.5 42.8, 36 43.8, 32 48 C28 43.8, 20.5 42.8, 12.5 46 Z" fill="#E2E8F0"/>
+                            <!-- Tallo / brote de crecimiento central -->
+                            <path d="M32 44 V27" stroke="#99F6E4" stroke-width="2.5" stroke-linecap="round"/>
+                            <!-- 5 Esferas/Pétalos de las Áreas del Desarrollo -->
+                            <circle cx="32" cy="13.5" r="5.5" fill="#FBBF24" stroke="#FEF3C7" stroke-width="1.2"/>
+                            <circle cx="19" cy="20.5" r="5" fill="#38BDF8" stroke="#E0F2FE" stroke-width="1.2"/>
+                            <circle cx="45" cy="20.5" r="5" fill="#34D399" stroke="#D1FAE5" stroke-width="1.2"/>
+                            <circle cx="22.5" cy="32.5" r="4.8" fill="#C084FC" stroke="#F3E8FF" stroke-width="1.2"/>
+                            <circle cx="41.5" cy="32.5" r="4.8" fill="#FB7185" stroke="#FFE4E6" stroke-width="1.2"/>
+                            <!-- Silueta infantil central integrada -->
+                            <circle cx="32" cy="25.5" r="3.4" fill="#FFFFFF"/>
+                            <path d="M26.5 38.5 C26.5 33.2, 37.5 33.2, 37.5 38.5" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="font-display text-lg sm:text-xl font-bold text-slate-900 leading-tight">
+                            Calendario del Desarrollo Infantil
+                        </h1>
+                        <p class="text-xs sm:text-sm text-slate-500">
+                            Guía Orientativa (0 a 84 meses / 0 a 7 años) • Basada en Margarita Ramos y Jorge Ramos
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Selector de Rol / Modo de Lectura -->
+                <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                    <div class="bg-slate-100 p-1 rounded-xl flex items-center border border-slate-200/70" role="group" aria-label="Modo de visualización">
+                        <button type="button" id="btnModeParents" onclick="setViewMode('parents')" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center gap-1.5 bg-white text-brand-700 shadow-sm">
+                            <span>🏡</span>
+                            <span>Padres y Cuidadores</span>
+                        </button>
+                        <button type="button" id="btnModePsych" onclick="setViewMode('psychologist')" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center gap-1.5 text-slate-600 hover:text-slate-900">
+                            <span>🩺</span>
+                            <span>Psicólogos / Formación</span>
+                        </button>
+                    </div>
+
+                    <button type="button" onclick="openSummaryModal()" class="px-3.5 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs sm:text-sm font-medium shadow-sm transition-all flex items-center gap-1.5">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span>Resumen y Consulta</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+        <!-- Panel Superior: Calculadora de Edad + Navegación de Pestañas Principales -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-4 no-print">
+            <!-- Calculadora de Edad en Meses -->
+            <div class="lg:col-span-5 bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <label for="ageMonthsInput" class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                            Ubicar etapa por edad del niño/a
+                        </label>
+                        <span class="text-xs text-brand-600 font-medium bg-brand-50 px-2 py-0.5 rounded-full">0 a 84 meses</span>
+                    </div>
+                    <div class="flex items-center gap-2.5">
+                        <div class="relative flex-1">
+                            <input type="number" id="ageMonthsInput" min="0" max="84" placeholder="Ej. 18 (meses)"
+                                class="w-full rounded-xl border border-slate-300 px-3.5 py-2 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-600/30 focus:border-brand-600 transition-all"
+                                oninput="handleAgeInput(this.value)">
+                        </div>
+                        <button type="button" onclick="clearAgeInput()" id="clearAgeBtn" class="hidden px-3 py-2 text-xs font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors">
+                            Limpiar
+                        </button>
+                    </div>
+                </div>
+                <div id="ageFeedback" class="mt-3 text-xs text-slate-600 bg-slate-50 rounded-xl p-2.5 border border-slate-100 leading-relaxed">
+                    Ingresa la edad en meses para saltar automáticamente a su rango del cuaderno. <em>Nota: En bebés prematuros menores de 2 años, utiliza la edad corregida.</em>
+                </div>
+            </div>
+
+            <!-- Selector de Vistas Principales y Orientación Neurodiversidad -->
+            <div class="lg:col-span-7 bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-sm flex flex-col justify-between gap-3">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Herramientas de Exploración</span>
+                    <button type="button" onclick="toggleNeuroPanel()" class="text-xs font-semibold text-teal-700 bg-teal-50 hover:bg-teal-100 border border-teal-200 px-3 py-1.5 rounded-xl transition-colors flex items-center gap-1.5">
+                        <span>🧩</span>
+                        <span>Guía Neurodiversidad (TEA, TDAH, Asperger, Down)</span>
+                        <svg id="neuroChevron" class="w-3.5 h-3.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Tabs de Vista -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
+                    <button type="button" id="tabStageView" onclick="switchMainTab('stage')" class="p-3 rounded-xl border-2 border-brand-600 bg-brand-50/60 text-left transition-all">
+                        <div class="text-xs font-bold text-brand-800 flex items-center gap-1.5">
+                            <span>📅</span> Explorador por Etapa
+                        </div>
+                        <p class="text-[11px] text-slate-600 mt-0.5">Línea de tiempo y lista por rango de edad.</p>
+                    </button>
+
+                    <button type="button" id="tabLongitudinalView" onclick="switchMainTab('longitudinal')" class="p-3 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-left transition-all">
+                        <div class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                            <span>📈</span> Línea Longitudinal (0-7 años)
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Evolución continua de cada área paso a paso.</p>
+                    </button>
+
+                    <button type="button" id="tabSearchView" onclick="switchMainTab('search')" class="p-3 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-left transition-all">
+                        <div class="text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                            <span>🔍</span> Buscador Global
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Busca conductas específicas en todo el cuaderno.</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel Colapsable de Orientación Psicoeducativa sobre Neurodiversidad -->
+        <section id="neurodiversityPanel" class="hidden bg-gradient-to-br from-teal-50/90 via-white to-indigo-50/70 rounded-2xl border border-teal-200/80 p-5 sm:p-6 shadow-sm transition-all">
+            <div class="flex items-start justify-between gap-4 border-b border-teal-100 pb-4 mb-4">
+                <div>
+                    <span class="inline-block text-[11px] font-bold uppercase tracking-wider text-teal-700 bg-teal-100/80 px-2.5 py-0.5 rounded-full mb-1">
+                        Mirada Psicoeducativa y Respetuosa
+                    </span>
+                    <h2 class="font-display text-lg sm:text-xl font-bold text-slate-900">
+                        Cómo interpretar este calendario en niños neurodivergentes
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-4xl">
+                        Los hitos del cuaderno de <em>Margarita y Jorge Ramos</em> representan promedios poblacionales estadísticos, <strong>no reglas rígidas ni etiquetas diagnósticas</strong>. En condiciones del neurodesarrollo, es habitual observar <strong>perfiles irregulares o "en picos"</strong> (habilidades muy avanzadas en un área y necesidades de apoyo en otra).
+                    </p>
+                </div>
+                <button type="button" onclick="toggleNeuroPanel()" class="p-1.5 text-slate-400 hover:text-slate-700 rounded-lg bg-white/80 border border-slate-200">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- TEA / Autismo -->
+                <div class="bg-white/90 rounded-xl p-4 border border-teal-100 shadow-sm">
+                    <h3 class="font-bold text-sm text-teal-900 flex items-center gap-1.5 mb-2">
+                        <span>♾️</span> Autismo (TEA)
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-2">
+                        Presta especial atención a la <strong>comunicación social temprana</strong> (atención conjunta, señalar para compartir interés, respuesta al nombre, juego simbólico) y a la <strong>integración sensorial</strong> (reacciones ante sonidos, texturas o cambios de rutina).
+                    </p>
+                    <p class="text-[11px] text-teal-800 bg-teal-50 p-2 rounded-lg">
+                        <strong>Enfoque:</strong> Un niño autista puede armar rompecabezas complejos antes de lo esperado y requerir apoyo en el lenguaje expresivo o juego grupal.
+                    </p>
+                </div>
+
+                <!-- Perfil Asperger -->
+                <div class="bg-white/90 rounded-xl p-4 border border-indigo-100 shadow-sm">
+                    <h3 class="font-bold text-sm text-indigo-900 flex items-center gap-1.5 mb-2">
+                        <span>💡</span> Perfil Asperger (TEA Nivel 1)
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-2">
+                        Suelen mostrar un desarrollo <strong>cognoscitivo y vocabulario formal temprano muy destacado</strong>, pero pueden presentar desafíos en la pragmática del lenguaje (bromas, doble sentido), reglas sociales implícitas y coordinación motora fina/gruesa.
+                    </p>
+                    <p class="text-[11px] text-indigo-800 bg-indigo-50 p-2 rounded-lg">
+                        <strong>Enfoque:</strong> Observar cómo negocia turnos, interpreta bromas amistosas y maneja la frustración en juegos competitivos.
+                    </p>
+                </div>
+
+                <!-- TDAH -->
+                <div class="bg-white/90 rounded-xl p-4 border border-amber-100 shadow-sm">
+                    <h3 class="font-bold text-sm text-amber-900 flex items-center gap-1.5 mb-2">
+                        <span>⚡</span> TDAH (Atención e Hiperactividad)
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-2">
+                        La habilidad puede estar adquirida, pero su ejecución depende de las <strong>funciones ejecutivas</strong> (atención sostenida, inhibición de impulsos, memoria de trabajo y regulación emocional).
+                    </p>
+                    <p class="text-[11px] text-amber-800 bg-amber-50 p-2 rounded-lg">
+                        <strong>Enfoque:</strong> Evaluar conductas en ambientes estructurados y dividir instrucciones de 2 o 3 pasos en consignas visuales cortas.
+                    </p>
+                </div>
+
+                <!-- Síndrome de Down -->
+                <div class="bg-white/90 rounded-xl p-4 border border-rose-100 shadow-sm">
+                    <h3 class="font-bold text-sm text-rose-900 flex items-center gap-1.5 mb-2">
+                        <span>💛</span> Síndrome de Down (Trisomía 21)
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-2">
+                        El desarrollo sigue la misma secuencia natural, aunque a un <strong>ritmo más pausado</strong>, influido frecuentemente por la hipotonía muscular (área física y articulación del habla), mientras que la comprensión social suele ser una gran fortaleza.
+                    </p>
+                    <p class="text-[11px] text-rose-800 bg-rose-50 p-2 rounded-lg">
+                        <strong>Enfoque:</strong> Valorar cada logro propio sin comparar cronológicamente de forma rígida; apoyar con estímulos visuales y terapia motora/de lenguaje.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA 1: EXPLORADOR POR ETAPA (Línea de Tiempo + Áreas + Checklist) -->
+        <div id="viewStageContainer" class="space-y-6">
+            <!-- Línea de Tiempo Interactiva Horizontal (14 Etapas) -->
+            <section class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 shadow-sm no-print">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                    <div>
+                        <h2 class="font-display text-sm sm:text-base font-bold text-slate-900 flex items-center gap-2">
+                            <span>🗓️</span>
+                            <span>Línea de Tiempo del Desarrollo (14 Etapas del Cuaderno)</span>
+                        </h2>
+                        <p class="text-xs text-slate-500">Selecciona una etapa para revisar sus hitos por área o usa los botones de navegación</p>
+                    </div>
+                    <div class="flex items-center gap-1.5">
+                        <button type="button" onclick="navigateStage(-1)" id="prevStageBtn" class="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-40 transition-colors">
+                            ← Anterior
+                        </button>
+                        <button type="button" onclick="navigateStage(1)" id="nextStageBtn" class="px-3 py-1.5 rounded-lg border border-slate-200 text-xs font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-40 transition-colors">
+                            Siguiente →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Carrusel de etapas -->
+                <div id="timelineBar" class="timeline-scroll flex items-stretch gap-2.5 overflow-x-auto pb-3 pt-1">
+                    <!-- Se renderiza dinámicamente con JS -->
+                </div>
+            </section>
+
+            <!-- Encabezado de la Etapa Seleccionada + Guía Contextual según Rol + Filtros de Área -->
+            <section class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-slate-100">
+                    <div>
+                        <div class="flex flex-wrap items-center gap-2 mb-1">
+                            <span id="stageBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-brand-100 text-brand-800">
+                                Etapa 1 de 14
+                            </span>
+                            <span id="stageEquivBadge" class="px-2.5 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-600">
+                                Recién nacido a 3 meses
+                            </span>
+                        </div>
+                        <h2 id="stageTitle" class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+                            0-3 meses
+                        </h2>
+                    </div>
+
+                    <!-- Resumen de Progreso de Observación de la Etapa -->
+                    <div class="flex flex-wrap items-center gap-3 bg-slate-50 p-3 rounded-xl border border-slate-200/70">
+                        <div class="text-center px-2">
+                            <div id="statAchieved" class="text-lg font-bold text-emerald-600">0</div>
+                            <div class="text-[11px] font-medium text-slate-500">Observado</div>
+                        </div>
+                        <div class="h-7 w-px bg-slate-200"></div>
+                        <div class="text-center px-2">
+                            <div id="statProcess" class="text-lg font-bold text-amber-600">0</div>
+                            <div class="text-[11px] font-medium text-slate-500">En proceso / Apoyo</div>
+                        </div>
+                        <div class="h-7 w-px bg-slate-200"></div>
+                        <div class="text-center px-2">
+                            <div id="statPending" class="text-lg font-bold text-slate-500">0</div>
+                            <div class="text-[11px] font-medium text-slate-500">Sin registrar</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orientación Contextual Dinámica (Padres vs Psicólogos) -->
+                <div id="roleGuidanceBox" class="mt-4 p-4 rounded-xl bg-brand-50/70 border border-brand-100 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                    <!-- Se actualiza dinámicamente según etapa y rol -->
+                </div>
+
+                <!-- Barra de Filtros por Área y Búsqueda Local -->
+                <div class="mt-5 flex flex-col md:flex-row md:items-center justify-between gap-3 no-print">
+                    <div id="areaFilterPills" class="flex flex-wrap items-center gap-1.5">
+                        <!-- Botones de filtro por área -->
+                    </div>
+
+                    <div class="relative w-full md:w-64">
+                        <input type="text" id="stageSearchInput" placeholder="Filtrar en esta etapa..."
+                            class="w-full rounded-xl border border-slate-300 pl-9 pr-3 py-1.5 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-600/30 focus:border-brand-600"
+                            oninput="renderCurrentStageContent()">
+                        <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Leyenda de Estados de Observación -->
+            <div class="bg-white rounded-xl px-4 py-3 border border-slate-200/80 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600 no-print">
+                <span class="font-semibold text-slate-700">Haz clic en cada conducta para alternar su estado sin perder tu posición de lectura:</span>
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="inline-flex items-center gap-1.5">
+                        <span class="w-3 h-3 rounded-full bg-slate-200 border border-slate-300 inline-block"></span> No registrado
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 text-emerald-700 font-medium">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span> Observado / Logrado
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 text-amber-700 font-medium">
+                        <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span> En proceso / Con apoyo
+                    </span>
+                </div>
+            </div>
+
+            <!-- Contenedor de las 5 Áreas del Desarrollo -->
+            <div id="areasContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <!-- Tarjetas de las 5 áreas generadas por JS -->
+            </div>
+
+            <!-- Apartado de Observaciones del Cuaderno por Etapa -->
+            <section class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm">
+                <div class="flex items-center justify-between mb-2">
+                    <label for="stageNotesInput" class="font-display font-bold text-base text-slate-900 flex items-center gap-2">
+                        <span>📝</span>
+                        <span>Observaciones del Cuaderno — <span id="notesStageLabel">0-3 meses</span></span>
+                    </label>
+                    <span id="notesSavedIndicator" class="text-xs text-emerald-600 font-medium opacity-0 transition-opacity">
+                        ✓ Guardado localmente
+                    </span>
+                </div>
+                <p class="text-xs text-slate-500 mb-3">
+                    Espacio dedicado (como en cada hoja del cuaderno original) para anotar contexto ambiental, intereses del niño, apoyos utilizados, historial de vacunas o preguntas para el especialista.
+                </p>
+                <textarea id="stageNotesInput" rows="3" placeholder="Escribe aquí tus observaciones sobre esta etapa..."
+                    class="w-full rounded-xl border border-slate-300 p-3.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-600/30 focus:border-brand-600 transition-all"
+                    oninput="saveStageNote(this.value)"></textarea>
+            </section>
+        </div>
+
+        <!-- VISTA 2: LÍNEA DE TIEMPO LONGITUDINAL POR ÁREA (0 a 84 meses) -->
+        <div id="viewLongitudinalContainer" class="hidden space-y-6">
+            <section class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+                    <div>
+                        <h2 class="font-display text-xl font-bold text-slate-900">
+                            Línea de Tiempo Longitudinal (0 a 7 años)
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-500 mt-1">
+                            Observa cómo progresa una misma área del desarrollo a través de las 14 etapas del cuaderno. Ideal para identificar continuidad o perfiles asincrónicos.
+                        </p>
+                    </div>
+                    <div id="longitudinalAreaSelector" class="flex flex-wrap gap-2">
+                        <!-- Botones de las 5 áreas -->
+                    </div>
+                </div>
+
+                <!-- Línea vertical longitudinal -->
+                <div id="longitudinalTimelineContent" class="mt-6 relative border-l-2 border-slate-200 ml-3 sm:ml-6 space-y-6 pb-2">
+                    <!-- Contenido longitudinal generado por JS -->
+                </div>
+            </section>
+        </div>
+
+        <!-- VISTA 3: BUSCADOR GLOBAL DE CONDUCTAS -->
+        <div id="viewSearchContainer" class="hidden space-y-6">
+            <section class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-sm">
+                <h2 class="font-display text-xl font-bold text-slate-900 mb-1">
+                    Buscador Global en el Cuaderno
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-500 mb-4">
+                    Escribe cualquier palabra clave (ej. <em>"esfínteres", "cuchara", "balbucea", "tijeras", "bicicleta", "empatía", "sumas"</em>) para localizar en qué etapa y área aparece.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <div class="relative flex-1">
+                        <input type="text" id="globalSearchInput" placeholder="Buscar conducta o habilidad en las 14 etapas..."
+                            class="w-full rounded-xl border border-slate-300 pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-600/30 focus:border-brand-600"
+                            oninput="performGlobalSearch(this.value)">
+                        <svg class="w-5 h-5 text-slate-400 absolute left-3.5 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-wrap gap-1.5 items-center">
+                        <span class="text-xs text-slate-400">Sugerencias:</span>
+                        <button type="button" onclick="setGlobalSearch('esfínteres')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1.5 rounded-lg">esfínteres</button>
+                        <button type="button" onclick="setGlobalSearch('cuchara')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1.5 rounded-lg">cuchara</button>
+                        <button type="button" onclick="setGlobalSearch('palabras')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1.5 rounded-lg">palabras</button>
+                        <button type="button" onclick="setGlobalSearch('simulación')" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 px-2.5 py-1.5 rounded-lg">simulación</button>
+                    </div>
+                </div>
+
+                <div id="globalSearchResults" class="mt-6 space-y-3">
+                    <div class="text-center py-10 text-slate-400 text-sm">
+                        Escribe un término arriba para explorar los indicadores del cuaderno.
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer Institucional y Ético -->
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mt-8 border-t border-slate-200 text-xs text-slate-500 space-y-2">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+            <p class="font-semibold text-slate-700">
+                Calendario del Desarrollo Infantil — Obra original de Margarita Ramos y Jorge Ramos.
+            </p>
+            <button type="button" onclick="resetAllProgress()" class="no-print text-rose-600 hover:text-rose-700 font-medium underline">
+                Reiniciar todos los registros locales
+            </button>
+        </div>
+        <p class="leading-relaxed">
+            <strong>Descargo de responsabilidad:</strong> Esta aplicación web ha sido diseñada con fines estrictamente psicoeducativos y de orientación basada en el cuaderno citado. No reemplaza la valoración integral realizada por psicólogos clínicos, neuropediatras, terapeutas de lenguaje o especialistas en neurodesarrollo. La interpretación y uso de los datos registrados es responsabilidad exclusiva del usuario o profesional que los emplea.
+        </p>
+    </footer>
+
+    <!-- MODAL 1: MARCO ÉTICO Y DISCLAIMER COMPLETO -->
+    <div id="disclaimerModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 space-y-4 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                <h3 class="font-display text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <span class="text-amber-500">⚖️</span> Marco Ético, Alcance y Responsabilidad
+                </h3>
+                <button type="button" onclick="closeDisclaimerModal()" class="text-slate-400 hover:text-slate-700 p-1 rounded-lg">✕</button>
+            </div>
+            <div class="space-y-3 text-sm text-slate-700 leading-relaxed">
+                <p>
+                    <strong>1. Fuente Bibliográfica:</strong> Todos los ítems conductuales, rangos de edad (0 a 84 meses) y las cinco áreas del desarrollo (Cognoscitivo, Lingüístico, Socioemocional, Adaptativo y Físico) provienen íntegramente del cuaderno <em>"Calendario del Desarrollo Infantil"</em> de <strong>Margarita Ramos y Jorge Ramos</strong>.
+                </p>
+                <p>
+                    <strong>2. Naturaleza Orientativa (No Diagnóstica):</strong> Este instrumento sirve como guía de observación cotidiana para padres y como apoyo didáctico para psicólogos en formación. La ausencia de una conducta en un rango de edad específico <strong>no constituye por sí sola un diagnóstico</strong> de Trastorno del Espectro Autista (TEA), TDAH, perfil Asperger, discapacidad intelectual ni ninguna otra condición.
+                </p>
+                <p>
+                    <strong>3. Neurodiversidad y Ritmos Individuales:</strong> Cada niño posee una trayectoria única. En niños neurodivergentes o con condiciones genéticas como el Síndrome de Down, los hitos pueden emerger en tiempos distintos o con apoyos específicos (visuales, motores, sensoriales o comunicativos).
+                </p>
+                <p class="bg-amber-50 border border-amber-200 p-3 rounded-xl text-amber-950 font-medium">
+                    <strong>4. Responsabilidad de Uso:</strong> El uso, interpretación, comunicación o recomendación derivada de esta herramienta digital es estricta responsabilidad de quien la utiliza o la recomienda. Ante cualquier duda sobre el desarrollo de un infante, acuda siempre a valoración profesional multidisciplinaria.
+                </p>
+            </div>
+            <div class="pt-2 flex justify-end">
+                <button type="button" onclick="closeDisclaimerModal()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold transition-colors">
+                    Entendido y Aceptado
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: RESUMEN DE OBSERVACIÓN PARA CONSULTA E IMPRESIÓN -->
+    <div id="summaryModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full p-6 shadow-2xl border border-slate-200 flex flex-col max-h-[90vh]">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3 shrink-0 no-print">
+                <div>
+                    <h3 class="font-display text-lg font-bold text-slate-900">
+                        Resumen de Observación del Desarrollo
+                    </h3>
+                    <p class="text-xs text-slate-500">Documento orientativo generado para compartir en consulta o seguimiento familiar</p>
+                </div>
+                <button type="button" onclick="closeSummaryModal()" class="text-slate-400 hover:text-slate-700 p-1.5 rounded-lg">✕</button>
+            </div>
+
+            <div id="summaryContent" class="overflow-y-auto py-4 space-y-5 text-sm text-slate-700 flex-1">
+                <!-- Se genera dinámicamente -->
+            </div>
+
+            <div class="border-t border-slate-100 pt-4 flex flex-wrap items-center justify-between gap-2 shrink-0 no-print">
+                <button type="button" onclick="copySummaryText()" id="copySummaryBtn" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-medium transition-colors">
+                    📋 Copiar texto del resumen
+                </button>
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="window.print()" class="px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs sm:text-sm font-semibold shadow-sm transition-colors">
+                        🖨️ Imprimir / Guardar PDF
+                    </button>
+                    <button type="button" onclick="closeSummaryModal()" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-medium">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE CONFIRMACIÓN PERSONALIZADO (Sin usar confirm()) -->
+    <div id="confirmResetModal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl border border-slate-200 space-y-4">
+            <h3 class="font-display text-lg font-bold text-slate-900">¿Reiniciar registros guardados?</h3>
+            <p class="text-sm text-slate-600">
+                Se borrarán todas las casillas marcadas y las notas de observación guardadas en este navegador. Esta acción no se puede deshacer.
+            </p>
+            <div class="flex justify-end gap-2 pt-2">
+                <button type="button" onclick="closeConfirmReset()" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium">
+                    Cancelar
+                </button>
+                <button type="button" onclick="executeResetAll()" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold">
+                    Sí, borrar registros
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =========================================================================
+        // 1. DEFINICIÓN DE ÁREAS DEL DESARROLLO (Colores y Metadatos Clínicos/Padres)
+        // =========================================================================
+        const AREAS_CONFIG = {
+            cognoscitivo: {
+                id: 'cognoscitivo',
+                name: 'Desarrollo Cognoscitivo',
+                shortName: 'Cognoscitivo',
+                icon: '🧠',
+                bgLight: 'bg-blue-50',
+                border: 'border-blue-200',
+                badgeBg: 'bg-blue-100',
+                badgeText: 'text-blue-800',
+                accentText: 'text-blue-700',
+                dot: 'bg-blue-600',
+                parentTip: 'Observa cómo explora objetos, resuelve pequeños retos, recuerda dónde están las cosas y comprende conceptos básicos mediante el juego cotidiano.',
+                psychTip: 'Evalúa permanencia del objeto, causalidad, función simbólica, clasificación, nociones lógico-matemáticas y funciones ejecutivas emergentes.'
+            },
+            linguistico: {
+                id: 'linguistico',
+                name: 'Desarrollo Lingüístico',
+                shortName: 'Lingüístico',
+                icon: '💬',
+                bgLight: 'bg-emerald-50',
+                border: 'border-emerald-200',
+                badgeBg: 'bg-emerald-100',
+                badgeText: 'text-emerald-800',
+                accentText: 'text-emerald-700',
+                dot: 'bg-emerald-600',
+                parentTip: 'Fíjate tanto en lo que entiende (lenguaje receptivo) como en cómo se comunica con miradas, gestos, sonidos o palabras.',
+                psychTip: 'Diferenciar siempre lenguaje receptivo vs. expresivo, intención comunicativa, pragmática social y desarrollo fonológico/morfosintáctico.'
+            },
+            socioemocional: {
+                id: 'socioemocional',
+                name: 'Desarrollo Socioemocional',
+                shortName: 'Socioemocional',
+                icon: '💛',
+                bgLight: 'bg-amber-50',
+                border: 'border-amber-200',
+                badgeBg: 'bg-amber-100',
+                badgeText: 'text-amber-800',
+                accentText: 'text-amber-700',
+                dot: 'bg-amber-500',
+                parentTip: 'Observa cómo expresa sus emociones, busca consuelo, interactúa con familiares o pares y participa en juegos compartidos.',
+                psychTip: 'Explorar vinculación afectiva, reciprocidad socioemocional, juego paralelo vs. cooperativo, teoría de la mente y autorregulación.'
+            },
+            adaptativo: {
+                id: 'adaptativo',
+                name: 'Desarrollo Adaptativo',
+                shortName: 'Adaptativo',
+                icon: '🌱',
+                bgLight: 'bg-purple-50',
+                border: 'border-purple-200',
+                badgeBg: 'bg-purple-100',
+                badgeText: 'text-purple-800',
+                accentText: 'text-purple-700',
+                dot: 'bg-purple-600',
+                parentTip: 'Incluye hábitos diarios de autonomía: sueño, alimentación, vestido, higiene y control de esfínteres según su ritmo.',
+                psychTip: 'Valora conducta adaptativa y autonomía funcional en actividades de la vida diaria (AVD), considerando sensibilidad sensorial y apoyos ambientales.'
+            },
+            fisico: {
+                id: 'fisico',
+                name: 'Desarrollo Físico',
+                shortName: 'Físico',
+                icon: '🏃',
+                bgLight: 'bg-rose-50',
+                border: 'border-rose-200',
+                badgeBg: 'bg-rose-100',
+                badgeText: 'text-rose-800',
+                accentText: 'text-rose-700',
+                dot: 'bg-rose-600',
+                parentTip: 'Abarca tanto movimientos amplios (gatear, caminar, saltar, equilibrio) como habilidades manuales finas (agarrar, apilar, dibujar, recortar).',
+                psychTip: 'Analiza motricidad gruesa, control postural, tono muscular, coordinación visomotora, pinza fina y lateralidad.'
+            }
+        };
+
+        // =========================================================================
+        // 2. BASE DE DATOS COMPLETA Y TEXTUAL DEL CUADERNO (14 ETAPAS / 0-84 MESES)
+        // =========================================================================
+        const DEVELOPMENT_STAGES = [
+            {
+                id: '0-3m',
+                label: '0-3 meses',
+                sublabel: 'Recién nacido a 3 meses',
+                icon: '👶',
+                minMonths: 0,
+                maxMonths: 3,
+                parentGuide: 'En estos primeros tres meses, el bebé se adapta al mundo exterior a través de sus sentidos y reflejos. Responder con calma a su llanto, hablarle cerca del rostro y ofrecer tiempo boca abajo supervisado fortalece su seguridad y tono muscular.',
+                psychGuide: 'Etapa sensoriomotora inicial: transición de reflejos arcaicos (succión, búsqueda, prensión palmar) a conductas voluntarias tempranas, seguimiento visual y sonrisa/atención social primaria.',
+                areas: {
+                    cognoscitivo: [
+                        'Sigue con la vista el movimiento de un objeto o de personas.',
+                        'Alterna su atención (mirada) entre dos objetos.',
+                        'Sostiene en su mano un juguete durante 15 segundos.',
+                        'Repite movimientos de los brazos para mantener un juguete activo.',
+                        'Los objetos que toma se los lleva a la boca.',
+                        'Observa sus manos.'
+                    ],
+                    linguistico: [
+                        'La causa de su llanto es imprecisa (0-1 mes).',
+                        'Deja de llorar cuando le hablan, lo cargan o lo confortan.',
+                        'Llora de diferente forma para expresar dolor, hambre o incomodidad.',
+                        'Voltea la cabeza hacia quien le observa o le habla.',
+                        'Produce sonidos guturales y vocales.'
+                    ],
+                    socioemocional: [
+                        'Observa la cara de un adulto.',
+                        'Dirige voluntariamente su atención hacia una persona o situación.',
+                        'Niega voluntariamente su atención hacia una persona o situación.'
+                    ],
+                    adaptativo: [
+                        'Duerme en intervalos de 4 a 10 horas.',
+                        'Muestra el reflejo de mamar.',
+                        'Al tocarle la mejilla vuelve la cabeza hacia la mejilla en cuestión.',
+                        'Expresa desagrado al quitarle la ropa por la cabeza.',
+                        'Disfruta el baño; mantiene los ojos abiertos y muestra satisfacción al sentir el agua tibia.'
+                    ],
+                    fisico: [
+                        'Muestra el reflejo de prensar objetos (p. ej., agarra objetos).',
+                        'Se sobresalta con los ruidos fuertes.',
+                        'Levanta la cabeza estando boca abajo.',
+                        'Boca abajo, extiende brazos y piernas alternada o simultáneamente.',
+                        'Levanta la cabeza 45° apoyándose en los codos.'
+                    ]
+                }
+            },
+            {
+                id: '3-6m',
+                label: '3-6 meses',
+                sublabel: 'Segundo trimestre',
+                icon: '🍼',
+                minMonths: 3,
+                maxMonths: 6,
+                parentGuide: 'El bebé descubre el placer de interactuar: ríe a carcajadas, balbucea y alcanza objetos con intención. Juegos sencillos como taparse la cara con un pañuelo suave estimulan su curiosidad y vínculo.',
+                psychGuide: 'Emergencia de reacciones circulares secundarias, sonrisa social recíproca, discriminación inicial familiar/extraño, balbuceo vocálico con variación prosódica y control cefálico/troncal en sedestación con apoyo.',
+                areas: {
+                    cognoscitivo: [
+                        'Encuentra un juguete parcialmente escondido.',
+                        'Es capaz de tomar los objetos que están al alcance de su mano.',
+                        'Golpea objetos.',
+                        'Se lleva los juguetes a la boca.',
+                        'Retira un pañuelo que cubre su cara.',
+                        'Busca el origen del sonido.'
+                    ],
+                    linguistico: [
+                        'Dirige su mirada a la persona quien le habla.',
+                        'Vocaliza como respuesta ante el estímulo del emisor.',
+                        'Vocaliza el placer y el dolor.',
+                        'Inicia el balbuceo variando tono e intensidad.',
+                        'Juega con su voz: gorjea, vocaliza y ríe a carcajadas.'
+                    ],
+                    socioemocional: [
+                        'Responde de manera diferente ante un familiar y un extraño.',
+                        'Responde con una sonrisa a un adulto sonriente.',
+                        'Expresa su deseo de ser cargado.',
+                        'Sonríe al verse reflejado en un espejo.',
+                        'Ríe a carcajadas.'
+                    ],
+                    adaptativo: [
+                        'Duerme durante la noche; toma de dos a tres siestas en el día.',
+                        'Al ver el biberón o el pecho de su madre, abre la boca y saca la lengua, anticipando la llegada del alimento.',
+                        'Se lleva comida a la boca utilizando la mano completa.',
+                        'Utiliza su lengua para rechazar su papilla.',
+                        'Acepta comer papilla con cuchara.'
+                    ],
+                    fisico: [
+                        'Acostado sobre el vientre se voltea boca arriba.',
+                        'Se sienta con apoyo.',
+                        'Abre la mano anticipándose al contacto.',
+                        'Acostado sobre la espalda, se agarra los pies con las manos.',
+                        'Sostiene un objeto pequeño.'
+                    ]
+                }
+            },
+            {
+                id: '6-9m',
+                label: '6-9 meses',
+                sublabel: 'Tercer trimestre',
+                icon: '🧸',
+                minMonths: 6,
+                maxMonths: 9,
+                parentGuide: 'Con mayor control de su cuerpo para sentarse y desplazarse, comienza a buscar objetos escondidos y a combinar sílabas ("ma-ma", "la-la"). Es natural que muestre inquietud cuando mamá o papá se alejan.',
+                psychGuide: 'Inicio de permanencia del objeto (búsqueda de objeto oculto), balbuceo canónico reduplicativo, ansiedad ante la separación como indicador de apego, sedestación independiente y transferencia bimanual.',
+                areas: {
+                    cognoscitivo: [
+                        'Se desplaza para alcanzar un objeto.',
+                        'Deja caer objetos sin observarlos.',
+                        'Agita objetos.',
+                        'Encuentra objetos escondidos (inicia la comprensión de la existencia de los objetos, aunque no estén a la vista).',
+                        'Alcanza y atrapa objetos cuyo movimiento produce ruido.',
+                        'Retira obstáculos para alcanzar un objeto.'
+                    ],
+                    linguistico: [
+                        'Se detiene ante una orden de "no".',
+                        'Imita sonidos familiares.',
+                        'Comprende los gestos de sus padres.',
+                        'Balbucea los sonidos de las letras: "m", "n", "t", "d", "b", "p", "g", "k".',
+                        'Dirige su mirada hacia objetos o personas conocidas, cuando le son nombrados.',
+                        'Balbucea utilizando la combinación consonante + vocal (p. ej., "ma-ma-ma", "la-la-la").',
+                        'Vocaliza para complacer a otra persona.',
+                        'Vocaliza de manera diferente para expresar "hambre", "enojo" o "satisfacción".'
+                    ],
+                    socioemocional: [
+                        'Interactúa a través de sonrisas y gorjeos.',
+                        'Aumentan las interacciones con otros infantes.',
+                        'Expresa diferentes estados físicos (p. ej., enojo, cansancio, emoción y hambre).',
+                        'Imita expresiones faciales, acciones y sonidos.',
+                        'Se inquieta cuando la madre desaparece.',
+                        'Rechaza algo que no le agrada, con gestos y movimientos.'
+                    ],
+                    adaptativo: [
+                        'Duerme toda la noche; toma de una a dos siestas durante el día.',
+                        'Cierra sus labios al tragar.',
+                        'Se quita sus calcetines.'
+                    ],
+                    fisico: [
+                        'Permanece sentado sin apoyo.',
+                        'Acostado boca arriba, se voltea boca abajo y viceversa.',
+                        'Alcanza objetos pequeños estirando su brazo.',
+                        'Sentado, si siente caerse de lado, se equilibra extendiendo los brazos.',
+                        'Se arrastra sobre el vientre hacia adelante.',
+                        'Recoge objetos con facilidad sin el uso del pulgar.',
+                        'Se cambia objetos de una mano a otra.'
+                    ]
+                }
+            },
+            {
+                id: '9-12m',
+                label: '9-12 meses',
+                sublabel: 'Cuarto trimestre (hacia 1 año)',
+                icon: '👣',
+                minMonths: 9,
+                maxMonths: 12,
+                parentGuide: 'Al acercarse al primer año, se comunica con gestos claros (aplaudir, decir adiós, señalar o guiar de la mano), responde a su nombre y explora el entorno apoyándose en muebles.',
+                psychGuide: 'Consolidación de la comunicación intencional preverbal y primeras palabras bisílabas, atención conjunta, pinza superior (pulgar-índice), bipedestación con apoyo y marcha lateral.',
+                areas: {
+                    cognoscitivo: [
+                        'Intencionalmente deja caer objetos para observarlos.',
+                        'Pide a un adulto que inicie y detenga el movimiento de un juguete.',
+                        'Voltea una tarjeta para ver el dibujo.'
+                    ],
+                    linguistico: [
+                        'Empieza a relacionar los objetos con sus nombres correspondientes.',
+                        'Da objetos cuando se le piden.',
+                        'Atiende al escuchar su nombre.',
+                        'Aplaude y agita su mano cuando se le solicita.',
+                        'Gesticula y vocaliza sus deseos y necesidades.',
+                        'Dice una palabra de dos sílabas (p. ej., "mamá", "papa", "tata", "tete").',
+                        'Articula casi todos los sonidos del habla.',
+                        'Para obtener lo que desea, guía a los demás a través de acciones físicas: palmeando, estirando, empujando, jalando.'
+                    ],
+                    socioemocional: [
+                        'Pocas veces se separa de su manta o juguete favorito.',
+                        'Participa en juegos simples: "escondidas", "papas y papas", etc.',
+                        'Repite acciones que llaman la atención o resultan graciosas para los demás.',
+                        'Expresa dos o más emociones (p. ej. placer, temor, tristeza).',
+                        'Responde de manera diferente ante niños y adultos.',
+                        'Responde con llanto y/o enojo al regaño.',
+                        'Reacciona con desconfianza ante un desconocido.'
+                    ],
+                    adaptativo: [
+                        'Duerme toda la noche; toma una sola siesta durante el día.',
+                        'Cierra su boca en el filo de una taza, derramando líquido a través de las orillas de su boca.',
+                        'Sujeta una taza y la dirige a la boca, tomándose de 4 a 5 sorbos.',
+                        'Toma una galleta y se la come sin ayuda.',
+                        'Sostiene el biberón, sin ayuda, al beber su contenido.',
+                        'Le agradan o le desagradan ciertas comidas.',
+                        'Empieza a cooperar al ser vestido.',
+                        'Evacua con regularidad.',
+                        'Reclama el cambio del pañal.'
+                    ],
+                    fisico: [
+                        'Con apoyo se inclina hasta sentarse.',
+                        'Con apoyo se levanta hasta pararse.',
+                        'Toma objetos pequeños utilizando los dedos pulgar e índice.',
+                        'Camina si se le sostiene de una mano.',
+                        'Presiona con el dedo índice.',
+                        'Se desplaza apoyándose en los muebles.',
+                        'Se mantiene momentáneamente de pie, sin ayuda.',
+                        'Alterna la acción de gatear y de sentarse.'
+                    ]
+                }
+            },
+            {
+                id: '12-18m',
+                label: '12-18 meses',
+                sublabel: '1 a 1 ½ años',
+                icon: '🚶',
+                minMonths: 12,
+                maxMonths: 18,
+                parentGuide: 'Etapa de grandes descubrimientos: da sus primeros pasos independientes, señala lo que desea, dice palabras sueltas con significado ("holofrases") y busca la mirada de sus padres como base segura para explorar.',
+                psychGuide: 'Marcha autónoma, uso funcional de objetos cotidianos, señalización protoimperativa/protodeclarativa, holofrases (3-20 palabras), autorreconocimiento especular y conducta de base segura.',
+                areas: {
+                    cognoscitivo: [
+                        'Activa un juguete después de la demostración hecha por un adulto.',
+                        'Pide a un adulto que le dé cuerda a un juguete nuevo.',
+                        'Llena y vacía un recipiente con objetos.',
+                        'Mueve carritos o juguetes diseñados con ruedas.',
+                        'Observa los dibujos de un cuento indicando o nombrando objetos conocidos, si se le requiere.',
+                        'Muestra juguetes a los adultos.',
+                        'Encuentra objetos escondidos en: una caja, bajo una tela o lienzo.',
+                        'Maneja de 3 a 4 juguetes, dejándolos de lado al recibir un juguete nuevo.',
+                        'Desarma juguetes que han sido diseñados para armar y desarmar.',
+                        'Levanta objetos del suelo con un hilo o cuerda.',
+                        'Demuestra el uso de objetos conocidos (p. ej., taza, cuchara).'
+                    ],
+                    linguistico: [
+                        'Expresa de manera adecuada de 3 a 20 palabras simples.',
+                        'Muestra comprensión de lo que escucha, a través de: dirigir su mirada hacia el emisor, expresando o repitiendo palabras mencionadas.',
+                        'Al requerírsele, señala de 1 a 3 partes de su cuerpo.',
+                        'Señala el objeto deseado.',
+                        'Protesta diciendo "no", moviendo su cabeza, retirándose o frunciendo el ceño.',
+                        'Utiliza gestos y palabras rituales como: "adiós", "hola".',
+                        'Dice "mamá", "papa" discriminadamente.',
+                        'Al requerírsele, señala objetos conocidos.',
+                        'Responde a preguntas simples de "¿qué?", "¿quién?" y "¿cuándo?".',
+                        'Utiliza gestos y vocalizaciones para reñir, bromear y avisar.',
+                        'Utiliza frases de una sola palabra para expresar un pensamiento completo (p. ej., "parque" por "llévame al parque").',
+                        'Utiliza la entonación de oraciones e imita algunas palabras.',
+                        'Dice "se acabó" y pide "más".'
+                    ],
+                    socioemocional: [
+                        'Se reconoce ante un espejo y/o retrato.',
+                        'Juega solo durante períodos breves.',
+                        'Manifiesta celos.',
+                        'Al conducirse de manera independiente, quizá requiera regresar a donde están sus papás por seguridad y atención (le agrada saber que un adulto está cerca).',
+                        'Muestra primeros indicios de independencia al conducirse de manera juguetona y exploratoria (probablemente siga requiriendo algo de supervisión y apoyo).',
+                        'El contacto con otros niños es propiciado por un adulto o un juguete.',
+                        'Al enfrentar una situación nueva, busca a sus padres para sentirse seguro.'
+                    ],
+                    adaptativo: [
+                        'Duerme durante la noche, sin necesidad de tomar ninguna siesta durante el día.',
+                        'Come con cuchara y bebe en taza, sin ayuda, pero derramando el alimento frecuentemente.',
+                        'Se sienta en el sanitario por lo menos un minuto y con supervisión.'
+                    ],
+                    fisico: [
+                        'Deja caer objetos dentro de un recipiente pequeño.',
+                        'Apila de 2 a 4 objetos.',
+                        'Toma el lápiz con el puño y con el pulgar hacia arriba.',
+                        'Sube y baja una escalera con ayuda y descansando ambos pies en cada escalón.',
+                        'Inicia y detiene su marcha sin dificultad.',
+                        'Estando sentado, puede pararse sin apoyo.',
+                        'Al caminar, disfruta empujar o jalar juguetes.',
+                        'Da pasos sin ayuda.',
+                        'De pie, puede inclinarse y volver a incorporarse (flexionando las rodillas).'
+                    ]
+                }
+            },
+            {
+                id: '18-24m',
+                label: '18-24 meses',
+                sublabel: '1 ½ a 2 años',
+                icon: '🧱',
+                minMonths: 18,
+                maxMonths: 24,
+                parentGuide: 'Empieza a combinar dos palabras ("más agua", "mío"), imita tareas del hogar y reafirma su identidad diciendo "no" con frecuencia. Es una etapa normal de autoafirmación y juego paralelo junto a otros niños.',
+                psychGuide: 'Explosión léxica inicial (comprende ~300, expresa 20-50 palabras), habla telegráfica de 2 palabras, juego simbólico simple, juego paralelo y etapa normativa de negativismo/autoafirmación.',
+                areas: {
+                    cognoscitivo: [
+                        'Busca a una persona conocida que ha abandonado la habitación.',
+                        'Activa un juguete sin demostración de un adulto.',
+                        'Espontáneamente nombra objetos.',
+                        'Utiliza un objeto (palo, tabla) para acercar un juguete que está fuera de su alcance.',
+                        'Busca metódicamente un objeto escondido.'
+                    ],
+                    linguistico: [
+                        'Comprende aproximadamente 300 palabras.',
+                        'Utiliza de 20 a 50 palabras.',
+                        'Al requerírsele, señala 5 partes de su cuerpo.',
+                        'Elabora palabras con la estructura consonante/vocal/consonante.',
+                        'Elabora oraciones con un promedio de 2 palabras.',
+                        'Nombra objetos familiares.',
+                        'Niega y afirma con el movimiento de su cabeza.',
+                        'Escucha atento al nombrarle objetos en ilustraciones.',
+                        'Dice su nombre.',
+                        'Combina dos palabras para crear frases.',
+                        'Sigue instrucciones que impliquen "dentro", "sobre".',
+                        'Ordena (p. ej., "quítate"), y utiliza posesivos (p. ej., "mío").'
+                    ],
+                    socioemocional: [
+                        'Disfruta los juegos sencillos de simulación (p. ej., al darle de comer, el adulto simula que la cuchara es un avión).',
+                        'Juega solo, aún cuando otros niños estén presentes.',
+                        'A menudo hace lo contrario de lo que se le pide.',
+                        'Usualmente se muestra desafiante diciendo "no" a muchos requerimientos.',
+                        'Es curioso, se mete en todo.',
+                        'Se le dificulta compartir.'
+                    ],
+                    adaptativo: [
+                        'Empieza a utilizar el tenedor.',
+                        'Mastica la comida.',
+                        'Imita diversas acciones domésticas (p. ej., barrer, lavar, pasar el plumero).',
+                        'Aparta el obstáculo que le impida abrir la puerta.',
+                        'Indica o verbaliza sus necesidades fisiológicas el 50% de las veces.',
+                        'Ayuda a guardar las cosas.'
+                    ],
+                    fisico: [
+                        'Elabora vigorosamente garabatos con crayolas o marcadores.',
+                        'Apila de 4 a 6 objetos.',
+                        'Encaja anillos al azar en el tablero.',
+                        'Camina sin caerse.',
+                        'Lanza pelotas pequeñas.',
+                        'Al escuchar música empieza a bailar.',
+                        'Patea pelotas hacia adelante.',
+                        'Se pone en cuclillas para jugar.',
+                        'Baja las escaleras gateando hacia atrás.'
+                    ]
+                }
+            },
+            {
+                id: '24-30m',
+                label: '24-30 meses',
+                sublabel: '2 a 2 ½ años',
+                icon: '🖍️',
+                minMonths: 24,
+                maxMonths: 30,
+                parentGuide: 'Sus juegos tienen secuencias ("dar de comer al muñeco"), arma frases de 2 a 3 palabras, quiere hacerlo todo por sí mismo y puede frustrarse con facilidad cuando algo no sale como espera.',
+                psychGuide: 'Juego simbólico secuenciado, expansión gramatical (plurales, interrogativos qué/dónde, órdenes de 2 pasos), baja tolerancia a la frustración propia del desarrollo emocional y mayor coordinación motora.',
+                areas: {
+                    cognoscitivo: [
+                        'Da secuencia a las acciones en sus juegos, tales como: preparar papilla para la muñeca, darle de comer, limpiar su boca.',
+                        'Imita el doblado de un papel por la mitad.',
+                        'Cuenta de memoria hasta el número 5.',
+                        'Acomoda figuras iguales (p. ej., círculos con círculos, triángulos con triángulos).',
+                        'Comprende los conceptos "uno", "dos", "muchos" y "todos".',
+                        'Inserta anillos en una clavija en orden de tamaño.',
+                        'Manipula, presiona y extiende la plastilina.'
+                    ],
+                    linguistico: [
+                        'Comprende aproximadamente 500 palabras.',
+                        'Utiliza hasta 200 palabras.',
+                        'Elabora oraciones con un promedio de 2 a 3 palabras.',
+                        'Responde a preguntas que impliquen "¿qué?", "¿dónde?" (p. ej., "¿qué es eso?").',
+                        'Sigue instrucciones simples (p. ej., "siéntate aquí", "tráemelo").',
+                        'En ocasiones sustituye u omite algunas consonantes.',
+                        'Elabora preguntas simples (p. ej., "¿se fue papi?").',
+                        'Responde a dos órdenes relacionadas (p. ej., "levanta la pelota y tráemela").',
+                        'Utiliza el número plural de palabras simples (p. ej., "gato/gatos").'
+                    ],
+                    socioemocional: [
+                        'Insiste en hacer las cosas por sí mismo (p. ej., comer con cuchara, tomar de un vaso).',
+                        'Reacciona con berrinches al frustrarse.',
+                        'Es tímido ante desconocidos, especialmente si son adultos.',
+                        'Es impaciente y demandante.',
+                        'Reclama como suyos algunos objetos.',
+                        'Con adultos canta canciones conocidas.'
+                    ],
+                    adaptativo: [
+                        'Se quita los zapatos, calcetines y algún tipo de pantalones.',
+                        'Coopera para ser vestido.',
+                        'Abre la puerta girando la perilla.',
+                        'Trata de lavarse las manos y la cara.',
+                        'Avisa a tiempo sus necesidades fisiológicas para llegar al sanitario sin accidentes.',
+                        'Tiene evacuaciones menos frecuentes.',
+                        'Utiliza el bebedero para tomar agua.',
+                        'Ayuda con los quehaceres domésticos (p. ej., ayuda a guardar cosas).'
+                    ],
+                    fisico: [
+                        'Sube las escaleras, alternando los pies en cada escalón.',
+                        'Apila de 6 a 7 cubos.',
+                        'Camina hacia atrás.',
+                        'Corre sin caerse.',
+                        'Sostiene la crayola con los dedos manteniendo el dorso de la mano hacia afuera y el antebrazo acomodado de tal manera, que el dedo pulgar esté dirigido hacia abajo.',
+                        'Brinca con un pie dando varios pasos.',
+                        'Utiliza constantemente una mano en la mayoría de sus actividades.',
+                        'Brinca con los dos pies en un espacio (sin avanzar).',
+                        'Imita trazos circulares, horizontales y verticales.'
+                    ]
+                }
+            },
+            {
+                id: '30-36m',
+                label: '30-36 meses',
+                sublabel: '2 ½ a 3 años',
+                icon: '🎭',
+                minMonths: 30,
+                maxMonths: 36,
+                parentGuide: 'Al acercarse a los 3 años, clasifica colores y formas, usa pronombres ("yo", "tú", "mío"), inicia juegos de roles imaginarios (personajes) y avanza en el control de esfínteres diurno.',
+                psychGuide: 'Categorización perceptual (color, forma, tamaño, función), consolidación de pronombres personales/posesivos, juego simbólico de roles (ficción) y control esfinteriano diurno.',
+                areas: {
+                    cognoscitivo: [
+                        'Agrupa tres colores primarios igualándolos.',
+                        'Agrupa objetos conocidos por su color, forma, tamaño y función.',
+                        'Intenta alcanzar objetos elevados mediante el uso de medios adecuados (silla, taburete).',
+                        'Señala objetos familiares siguiendo un modelo.',
+                        'Agrupa objetos con su respectiva fotografía.',
+                        'Identifica fotografías de objetos comunes descritos por su uso (p. ej., "muéstrame qué usas para comer").'
+                    ],
+                    linguistico: [
+                        'Comprende aproximadamente 900 palabras.',
+                        'Utiliza hasta 500 palabras.',
+                        'Elabora oraciones con un promedio de 3 a 4 palabras.',
+                        'Comprende las palabras "grande" y "pequeño".',
+                        'Se refiere a sí mismo por su nombre.',
+                        'Utiliza pronombres (p. ej., yo, mío, tú).',
+                        'Articula las consonantes: "m", "n", "p" y "l".',
+                        'Utiliza pronombres en tercera persona: "él", "ella"; y los posesivos: "mío", "tuyo", "suyo".',
+                        'Elabora preguntas simples utilizando las palabras: "¿qué?", "¿dónde?".'
+                    ],
+                    socioemocional: [
+                        'Dice "por favor" y "gracias" cuando se le recuerda.',
+                        'Juega adecuadamente en grupos de 2 ó 3 niños durante períodos cortos.',
+                        'Muestra mucha insistencia en conseguir lo que desea.',
+                        'Inicia con los juegos simbólicos simulando ser determinado personaje (p. ej., indios, vaqueros o personajes de películas infantiles).'
+                    ],
+                    adaptativo: [
+                        'Pincha la comida con el tenedor y se la lleva a la boca.',
+                        'Puede ponerse prendas sencillas tales como: los calcetines, la camisa y el abrigo.',
+                        'Empieza a controlar sus esfínteres y las deposiciones diurnas, teniendo accidentes ocasionales.'
+                    ],
+                    fisico: [
+                        'Baja las escaleras alternando los pies en cada escalón.',
+                        'Apila de 7 a 8 cubos.',
+                        'Atrapa una pelota extendiendo sus brazos y presionándola contra el pecho.',
+                        'Realiza cortes con tijeras intentando seguir una línea.',
+                        'Dibuja una cara.'
+                    ]
+                }
+            },
+            {
+                id: '36-42m',
+                label: '36-42 meses',
+                sublabel: '3 a 3 ½ años',
+                icon: '🚲',
+                minMonths: 36,
+                maxMonths: 42,
+                parentGuide: 'Entra en la etapa del "¿por qué?", comparte juguetes, espera turnos y pedalea un triciclo. Disfruta mucho que le lean y repitan sus cuentos favoritos.',
+                psychGuide: 'Oraciones completas (S-V-C), preguntas causales ("¿por qué?"), memoria episódica reciente, inicio de reciprocidad social (compartir/turnos) y pinza trípode en desarrollo.',
+                areas: {
+                    cognoscitivo: [
+                        'Comprende el concepto de "más" (p. ej., "¿cuál de estas canastas tiene \'más\' pelotas?").',
+                        'Identifica y nombra los colores primarios.',
+                        'Recuerda eventos de una semana anterior.',
+                        'Escucha historias simples.',
+                        'Conoce los conceptos "delante" y "detrás".',
+                        'Siguiendo un modelo, arma un tren utilizando cubos.',
+                        'Describe objetos por su función o uso.',
+                        'Lee garabatos como si fueran palabras reales.',
+                        'Empieza a formar juicios simples de valor: "bueno", "malo", "bonito", "feo".'
+                    ],
+                    linguistico: [
+                        'Comprende aproximadamente 1,200 palabras.',
+                        'Utiliza hasta 800 palabras.',
+                        'Elabora oraciones con un promedio de 4 a 5 palabras.',
+                        'Escucha cuentos y pide que le repitan los que le gustan.',
+                        'Pregunta el significado de palabras desconocidas.',
+                        'Construye oraciones con sujeto, verbo y complemento.',
+                        'Responde a dos órdenes no relacionadas (p. ej., "deja el vaso en la mesa y apaga la televisión").',
+                        'Inicia la etapa de "preguntar" utilizando las palabras: "¿por qué?", "¿quién?", "¿cuántos?" y "¿qué?".',
+                        'Utiliza el tiempo pasado de verbos regulares.',
+                        'En la mayoría de las palabras pronuncia adecuadamente las consonantes finales.'
+                    ],
+                    socioemocional: [
+                        'Utiliza un estilo complejo del habla al interactuar con otros niños en situaciones sociales o de juego.',
+                        'Muestra afecto hacia niños menores abrazándolos y besándolos.',
+                        'Busca atraer la atención de los demás.',
+                        'Detecta si la atención de los demás es fingida.',
+                        'Comparte sus juguetes.',
+                        'Usualmente espera su turno.'
+                    ],
+                    adaptativo: [
+                        'Se sirve de una jarra, con ayuda.',
+                        'Manipula botones grandes y broches.',
+                        'Se lava y seca las manos sin ayuda.',
+                        'Controla sus esfínteres y deposiciones.'
+                    ],
+                    fisico: [
+                        'Sostiene la crayola entre el índice, el anular y el pulgar sin cerrar el puño.',
+                        'Manipula clavijas y clavijeros.',
+                        'Patea pelotas grandes.',
+                        'Pedalea y conduce un triciclo pequeño.',
+                        'Al dibujar, utiliza movimientos circulares, verticales y horizontales.',
+                        'Construye puentes utilizando cubos.'
+                    ]
+                }
+            },
+            {
+                id: '42-48m',
+                label: '42-48 meses',
+                sublabel: '3 ½ a 4 años',
+                icon: '✂️',
+                minMonths: 42,
+                maxMonths: 48,
+                parentGuide: 'Organiza juegos imaginarios elaborados con otros niños, muestra empatía genuina cuando alguien está triste o lastimado, dice su edad y puede recortar un círculo con tijeras.',
+                psychGuide: 'Juego cooperativo y sociodramático complejo, empatía afectiva/cognitiva emergente, identidad de género/datos personales, seguimiento de 3 órdenes relacionadas y equilibrio monopodal (5-10s).',
+                areas: {
+                    cognoscitivo: [
+                        'Cuenta 5 objetos.',
+                        'Dibuja una cara humana.',
+                        'Modela figuras sencillas con barro, arcilla o plastilina (p. ej., pelotas, víboras).',
+                        'Organiza juegos de simulación (p. ej., la casita, a tomar el té, indios y vaqueros, la guerra de las galaxias).',
+                        'Incorpora objetos imaginarios en sus juegos.',
+                        'Clasifica objetos por su forma y su color.'
+                    ],
+                    linguistico: [
+                        'Comprende aproximadamente de 1,500 a 2,000 palabras.',
+                        'Utiliza hasta 1,000 palabras.',
+                        'Elabora oraciones con un promedio de 4 a 5 palabras.',
+                        'Articula las consonantes: "b", "c", "d", "f", "g", "k", "n", "t" y "y".',
+                        'Responde a tres órdenes relacionadas (p. ej., "recoge la cuchara, ponla en la taza y tráemela").',
+                        'Describe el uso de objetos comunes.',
+                        'Completa analogías verbales simples (p. ej., "papi es hombre, mami es...").'
+                    ],
+                    socioemocional: [
+                        'Dice "gracias" y "por favor" espontáneamente.',
+                        'Expresa su edad y su apellido.',
+                        'Afirma si es niño o niña.',
+                        'Inicia el juego cooperativo.',
+                        'Saluda a personas conocidas con abrazos espontáneos.',
+                        'Muestra sentimientos de empatía por los demás.',
+                        'Se separa de sus padres sin llorar.'
+                    ],
+                    adaptativo: [
+                        'Come sin ayuda toda su comida, derramando ligeramente el alimento.',
+                        'Se cepilla los dientes siguiendo indicaciones.',
+                        'Se pone sus zapatos sin anudarlos.',
+                        'Limpia su nariz al recordarle e indicarle cómo hacerlo.'
+                    ],
+                    fisico: [
+                        'Recorta un círculo con tijeras.',
+                        'Corre esquivando obstáculos y dando vuelta en esquinas.',
+                        'Camina sobre una línea recta.',
+                        'Arma un rompecabezas sencillo de 3 a 5 piezas.',
+                        'Sube escaleras pequeñas de juegos infantiles.',
+                        'Se sostiene en un pie, sin ayuda, entre 5 y 10 segundos.'
+                    ]
+                }
+            },
+            {
+                id: '48-54m',
+                label: '48-54 meses',
+                sublabel: '4 a 4 ½ años',
+                icon: '🧩',
+                minMonths: 48,
+                maxMonths: 54,
+                parentGuide: 'Empieza a distinguir entre fantasía y realidad ("¿es verdad?"), crea rimas divertidas, se viste sin ayuda y prefiere jugar acompañado de otros niños.',
+                psychGuide: 'Diferenciación fantasía-realidad, conciencia fonológica inicial (rimas), uso de tiempos futuros y locuciones espaciales, autonomía en vestido/aseo y patrón de marcha maduro.',
+                areas: {
+                    cognoscitivo: [
+                        'Reconoce algunas letras.',
+                        'Apila 5 objetos en orden de tamaño.',
+                        'Comprende el concepto del número 3 (p. ej., "dame tres").',
+                        'Intenta dibujar objetos.',
+                        'Deduce qué va a pasar después.',
+                        'Empieza a diferenciar lo real de lo irreal, preguntando: "¿es verdad?".',
+                        'Juega con palabras (p. ej., crea sus propias rimas).',
+                        'Menciona el nombre de la calle y la ciudad en donde vive.',
+                        'Construye pirámides utilizando cubos.',
+                        'Clasifica objetos por su función.'
+                    ],
+                    linguistico: [
+                        'Comprende aproximadamente de 2,000 a 2,500 palabras.',
+                        'Utiliza hasta 1,500 palabras.',
+                        'Elabora oraciones con un promedio de 4 a 5 palabras.',
+                        'Utiliza el futuro de los verbos.',
+                        'Conoce los conceptos "entre", "arriba", "abajo", "encima", "fondo".',
+                        'Articula la consonante "g".',
+                        'Realiza pocas omisiones o sustituciones de consonantes.',
+                        'Utiliza adecuadamente formas verbales posesivas (p. ej., el gato del niño).'
+                    ],
+                    socioemocional: [
+                        'Pide ayuda cuando la necesita.',
+                        'Muestra orgullo al sentirse satisfecho de sus logros.',
+                        'Juega a disfrazarse.',
+                        'Expresa arrepentimiento.',
+                        'Prefiere jugar con otros niños que jugar solo.',
+                        'Le gusta mostrar sus talentos (p. ej., canto, baile).'
+                    ],
+                    adaptativo: [
+                        'Emplea todos los utensilios al comer.',
+                        'Limpia lo que haya derramado.',
+                        'Empieza a anudar las cintas de sus zapatos.',
+                        'Se lava la cara y las manos sin ayuda.',
+                        'Utiliza los cierres con facilidad.',
+                        'Se viste sin ayuda.',
+                        'Atiende, sin ayuda, sus necesidades fisiológicas, pidiendo privacidad en el baño.'
+                    ],
+                    fisico: [
+                        'Camina balanceando libremente brazos y piernas siguiendo un patrón cruzado o alternado, similar al patrón del caminar del adulto.',
+                        'Copia figuras de cruces.',
+                        'Salta sobre objetos de 12 a 15 centímetros de altura, aterrizando con ambos pies.',
+                        'Ensarta con destreza cuentas pequeñas en un cordón.',
+                        'Conduce una bicicleta equipada con ruedas auxiliares.'
+                    ]
+                }
+            },
+            {
+                id: '54-60m',
+                label: '54-60 meses',
+                sublabel: '4 ½ a 5 años',
+                icon: '✏️',
+                minMonths: 54,
+                maxMonths: 60,
+                parentGuide: 'Escribe su nombre, cuenta hasta 20, relata cuentos completos sin ver dibujos y respeta reglas sencillas en juegos grupales. Su destreza manual para dibujar y recortar es notable.',
+                psychGuide: 'Oraciones compuestas y causales, narrativa autónoma, pre-escritura del nombre propio, nociones comparativas/dimensionales, juego reglado grupal y motricidad fina avanzada.',
+                areas: {
+                    cognoscitivo: [
+                        'Dibuja objetos sin modelos.',
+                        'Reconoce algunas palabras impresas.',
+                        'Se interesa sobre su propio nacimiento.',
+                        'Escribe su nombre.',
+                        'Dibuja figuras con líneas/rayas.',
+                        'Comprende los conceptos: "más grande", "más alto", "largo/corto", "mismo/igual".',
+                        'Cuenta de memoria hasta el veinte.',
+                        'Clasifica objetos conocidos (p. ej., juguetes, comida, animales).',
+                        'Comprende los conceptos: "pesado/ligero", "fuerte/suave", "parecido/diferente".'
+                    ],
+                    linguistico: [
+                        'Comprende aproximadamente de 2,500 a 2,800 palabras.',
+                        'Utiliza hasta 2,000 palabras.',
+                        'Elabora oraciones con un promedio de 5 a 6 palabras.',
+                        'Relata cuentos con un lenguaje simple, sin apoyarse en dibujos.',
+                        'Elabora oraciones de causa y efecto (p. ej., "me dieron un dulce porque me porté bien").',
+                        'Genera oraciones compuestas (p. ej., "fuimos a la tienda y compramos leche").',
+                        'Articula las consonantes: "ch", "ll" e "y".',
+                        'Articula con dificultad algunas combinaciones de letras.'
+                    ],
+                    socioemocional: [
+                        'Muestra interés y simpatía por los demás.',
+                        'Pide permiso para usar las cosas de otras personas.',
+                        'Juega en grupo respetando reglas sencillas.',
+                        'Le gustan juguetes interactivos (p. ej., transformers, la casa de Barbie, camiones de volteo).'
+                    ],
+                    adaptativo: [
+                        'Se sirve a sí mismo en la mesa (los padres sostienen el plato de servir).',
+                        'Se cepilla los dientes.',
+                        'Empieza a peinarse o a cepillarse el cabello.',
+                        'Va al baño sin ayuda: se desviste, se limpia, le baja al sanitario y se viste de nuevo.'
+                    ],
+                    fisico: [
+                        'Brinca en un pie.',
+                        'Se impulsa al columpiarse utilizando sus piernas, manteniendo su propio ritmo.',
+                        'Recorta papel siguiendo una línea continua.',
+                        'Es hábil en el uso del lápiz, se observan movimientos finos en la mano.',
+                        'Copia figuras de cuadrados.',
+                        'Construye rompecabezas de 8 piezas, sin ensayo y error.',
+                        'Sujeta papeles con un clip.',
+                        'Realiza maromas.',
+                        'Camina sobre una barra de equilibrio de 10 centímetros de ancho.'
+                    ]
+                }
+            },
+            {
+                id: '60-72m',
+                label: '60-72 meses',
+                sublabel: '5 a 6 años',
+                icon: '📚',
+                minMonths: 60,
+                maxMonths: 72,
+                parentGuide: 'A los 5-6 años comprende nociones de tiempo (ayer/mañana), reconoce letras y números, consuela a sus amigos cuando están tristes y disfruta juegos con reglas claras.',
+                psychGuide: 'Preparación escolar: conciencia numérica (incluyendo el cero), nociones temporales/cuantitativas, articulación de /s/ y /r/, dominancia lateral establecida y conducta prosocial.',
+                areas: {
+                    cognoscitivo: [
+                        'Nombra los días de la semana, en orden.',
+                        'Lee los números del 1 al 10.',
+                        'Identifica monedas cuando se le nombran.',
+                        'Nombra la mayoría de las letras.',
+                        'Repite un cuento de un libro ilustrado, con razonable precisión.',
+                        'Comprende que el concepto "cero" (0) representa nada.',
+                        'Iguala letras.',
+                        'Gusta de libros y revistas ilustradas y de objetos móviles.',
+                        'Gusta de las adivinanzas simples.',
+                        'Busca conocer cómo nacen los perros, gatos.'
+                    ],
+                    linguistico: [
+                        'Comprende aproximadamente 13,000 palabras.',
+                        'Elabora oraciones con un promedio de 6 a 7 palabras.',
+                        'Utiliza consistentemente todos los pronombres.',
+                        'Utiliza los sufijos apreciativos superlativos "ísimo", "ísima".',
+                        'Establece las similitudes y diferencias entre objetos.',
+                        'Comprende el concepto: "contrario" (p. ej., contrario de caliente es frío).',
+                        'Articula las consonantes: "s", "r".',
+                        'Comprende los conceptos de "ayer/mañana", "más/menos", "algunos/muchos", "varios/pocos", "mayoría/minoría", "antes/después", "ahora/más tarde", "mañana/tarde".'
+                    ],
+                    socioemocional: [
+                        'Le agradan los juegos de competencia.',
+                        'Expresa sus sentimientos.',
+                        'Consuela a sus amigos en situaciones de angustia.',
+                        'Se conduce con seguridad al visitar a sus vecinos o familiares.',
+                        'Entiende y respeta las reglas justas de un juego.',
+                        'Admira profundamente a sus padres.',
+                        'Colecciona objetos (p. ej., piedras, barajitas, estampillas, fichas).',
+                        'Explica a los demás las reglas del juego.'
+                    ],
+                    adaptativo: [
+                        'Cruza la calle de manera segura.',
+                        'Anuda las cintas de sus zapatos sin lograr el nudo completo.',
+                        'Se viste y desviste sin ayuda; sin embargo, requiere ayuda con las cintas y al abrocharse la parte posterior de la ropa.',
+                        'Se peina con resultados satisfactorios.'
+                    ],
+                    fisico: [
+                        'Salta siguiendo una línea recta.',
+                        'Recorta figuras simples.',
+                        'El dominio lateral manual está establecido.',
+                        'Conduce una bicicleta sin ruedas auxiliares.',
+                        'Colorea figuras sin salirse del contorno.',
+                        'Rebota y atrapa pelotas pequeñas.',
+                        'Engoma y pega figuras adecuadamente.'
+                    ]
+                }
+            },
+            {
+                id: '72-84m',
+                label: '72-84 meses',
+                sublabel: '6 a 7 años',
+                icon: '🎓',
+                minMonths: 72,
+                maxMonths: 84,
+                parentGuide: 'Inicia la etapa escolar formal: lee y escribe palabras, resuelve sumas y restas sencillas, se ata las agujetas, acepta bromas amistosas y elige a sus amigos.',
+                psychGuide: 'Transición a operaciones concretas tempranas: lectoescritura inicial, cálculo de un dígito, articulación fonológica completa, regulación emocional ante críticas/bromas y autonomía personal avanzada.',
+                areas: {
+                    cognoscitivo: [
+                        'Escribe los números del 1 al 19, sin requerir un modelo.',
+                        'Ordena en secuencia adecuada tarjetas numeradas del 1 al 10.',
+                        'Comprende y sigue los horarios de los eventos.',
+                        'Resuelve sumas y restas de un dígito.',
+                        'Escribe de memoria su nombre y apellido.',
+                        'Lee 10 palabras escritas.',
+                        'Dibuja a una persona con 6 partes reconocibles.',
+                        'Establece los días/números precedentes y consecuentes.',
+                        'Comprende de manera vaga el tiempo (p. ej., la diferencia entre día / semana / mes).'
+                    ],
+                    linguistico: [
+                        'Comprende aproximadamente de 20,000 a 26,000 palabras.',
+                        'Elabora oraciones con un promedio de 6 a 7 palabras.',
+                        'Capta los errores de otros, en el uso del lenguaje.',
+                        'Utiliza comparativos de manera adecuada.',
+                        'Inventa una historia al momento de narrarla.',
+                        'Articula todos los sonidos de la lengua.',
+                        'Conoce las estaciones del año y sus características.',
+                        'Utiliza la voz pasiva de los verbos.',
+                        'Utiliza un léxico apropiado a su edad.',
+                        'Dice palabras malsonantes.'
+                    ],
+                    socioemocional: [
+                        'Respeta los turnos y las normas del juego.',
+                        'Acepta bromas leves y amistosas, sin inquietarse mucho.',
+                        'Acepta críticas válidas sin llorar, sin hacer pucheros o negándose a continuar.',
+                        'Selecciona a sus amigos.',
+                        'Su mejor amigo es del mismo sexo.',
+                        'Es obediente y quiere agradar.',
+                        'Utiliza excusas para evitar castigos.'
+                    ],
+                    adaptativo: [
+                        'Utiliza el cuchillo para untar el pan.',
+                        'Prepara platillos sencillos (p. ej., cereal, leche con chocolate).',
+                        'Se baña sin ayuda.',
+                        'Arregla y recoge la mesa sin ayuda.',
+                        'Usa la servilleta.',
+                        'Se anuda los zapatos con resultados satisfactorios.',
+                        'Selecciona la ropa apropiada según la ocasión y la temperatura.',
+                        'Atiende a sus necesidades fisiológicas antes de emprender una actividad.'
+                    ],
+                    fisico: [
+                        'Aprende a patinar.',
+                        'Lanza la pelota hacia un blanco.',
+                        'Traza sin dificultades una línea de principio a fin, al proporcionarle un laberinto sencillo en papel.',
+                        'Galopa guiándose con un pie por delante, transfiriendo su peso de una manera suave y proporcionada.',
+                        'Brinca la cuerda sin ayuda.',
+                        'Brinca alternando los pies y manteniendo el equilibrio.'
+                    ]
+                }
+            }
+        ];
+
+        // =========================================================================
+        // 3. ESTADO DE LA APLICACIÓN Y PERSISTENCIA LOCAL
+        // =========================================================================
+        const STORAGE_KEY = 'calendario_desarrollo_ramos_v1';
+
+        let appState = {
+            currentStageIndex: 0,
+            viewMode: 'parents', // 'parents' | 'psychologist'
+            activeAreaFilter: 'all', // 'all' | 'cognoscitivo' | 'linguistico' | 'socioemocional' | 'adaptativo' | 'fisico'
+            longitudinalArea: 'cognoscitivo',
+            mainTab: 'stage', // 'stage' | 'longitudinal' | 'search'
+            checklist: {}, // key: `${stageId}_${areaKey}_${itemIndex}` -> 'achieved' | 'process'
+            notes: {} // key: stageId -> string
+        };
+
+        // Cargar estado guardado de localStorage con manejo de errores y validación
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    const validIndex = Number.isInteger(parsed.currentStageIndex) &&
+                        parsed.currentStageIndex >= 0 &&
+                        parsed.currentStageIndex < DEVELOPMENT_STAGES.length
+                        ? parsed.currentStageIndex
+                        : 0;
+
+                    appState = {
+                        ...appState,
+                        ...parsed,
+                        currentStageIndex: validIndex,
+                        checklist: (parsed.checklist && typeof parsed.checklist === 'object') ? parsed.checklist : {},
+                        notes: (parsed.notes && typeof parsed.notes === 'object') ? parsed.notes : {}
+                    };
+                }
+            } catch (e) {
+                console.warn('No se pudo leer localStorage:', e);
+            }
+        }
+
+        function saveState() {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                    currentStageIndex: appState.currentStageIndex,
+                    viewMode: appState.viewMode,
+                    longitudinalArea: appState.longitudinalArea,
+                    checklist: appState.checklist,
+                    notes: appState.notes
+                }));
+            } catch (e) {
+                console.warn('No se pudo guardar en localStorage:', e);
+            }
+        }
+
+        // =========================================================================
+        // 4. INICIALIZACIÓN Y RENDERIZADO DE COMPONENTES
+        // =========================================================================
+        function initApp() {
+            loadState();
+            updateViewModeButtons();
+            renderTimelineBar(true);
+            renderAreaFilterPills();
+            renderCurrentStageContent();
+            renderLongitudinalAreaSelector();
+            renderLongitudinalTimeline();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initApp);
+        } else {
+            initApp();
+        }
+
+        // Cambio de Rol (Padres vs Psicólogos)
+        function setViewMode(mode) {
+            appState.viewMode = mode;
+            saveState();
+            updateViewModeButtons();
+            renderCurrentStageContent();
+            if (appState.mainTab === 'longitudinal') {
+                renderLongitudinalTimeline();
+            }
+        }
+
+        function updateViewModeButtons() {
+            const btnParents = document.getElementById('btnModeParents');
+            const btnPsych = document.getElementById('btnModePsych');
+
+            if (appState.viewMode === 'parents') {
+                btnParents.className = 'px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 bg-white text-brand-700 shadow-sm';
+                btnPsych.className = 'px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center gap-1.5 text-slate-600 hover:text-slate-900';
+            } else {
+                btnPsych.className = 'px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 bg-white text-brand-700 shadow-sm';
+                btnParents.className = 'px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all flex items-center gap-1.5 text-slate-600 hover:text-slate-900';
+            }
+        }
+
+        // Cambio de Pestaña Principal
+        function switchMainTab(tab) {
+            appState.mainTab = tab;
+
+            const views = {
+                stage: document.getElementById('viewStageContainer'),
+                longitudinal: document.getElementById('viewLongitudinalContainer'),
+                search: document.getElementById('viewSearchContainer')
+            };
+
+            const tabs = {
+                stage: document.getElementById('tabStageView'),
+                longitudinal: document.getElementById('tabLongitudinalView'),
+                search: document.getElementById('tabSearchView')
+            };
+
+            Object.keys(views).forEach(key => {
+                if (key === tab) {
+                    views[key].classList.remove('hidden');
+                    tabs[key].className = 'p-3 rounded-xl border-2 border-brand-600 bg-brand-50/60 text-left transition-all';
+                    tabs[key].querySelector('div').classList.add('text-brand-800');
+                    tabs[key].querySelector('div').classList.remove('text-slate-800');
+                } else {
+                    views[key].classList.add('hidden');
+                    tabs[key].className = 'p-3 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-left transition-all';
+                    tabs[key].querySelector('div').classList.remove('text-brand-800');
+                    tabs[key].querySelector('div').classList.add('text-slate-800');
+                }
+            });
+
+            if (tab === 'longitudinal') {
+                renderLongitudinalTimeline();
+            } else if (tab === 'stage') {
+                renderTimelineBar(false);
+                renderCurrentStageContent();
+            }
+        }
+
+        // Calculadora de Edad en Meses
+        function handleAgeInput(val) {
+            const feedback = document.getElementById('ageFeedback');
+            const clearBtn = document.getElementById('clearAgeBtn');
+
+            if (val === '' || val === null) {
+                clearBtn.classList.add('hidden');
+                feedback.innerHTML = 'Ingresa la edad en meses para saltar automáticamente a su rango del cuaderno. <em>Nota: En bebés prematuros menores de 2 años, utiliza la edad corregida.</em>';
+                return;
+            }
+
+            clearBtn.classList.remove('hidden');
+            const months = parseInt(val, 10);
+
+            if (isNaN(months) || months < 0) {
+                feedback.innerHTML = '<span class="text-rose-600 font-medium">Por favor ingresa un número válido entre 0 y 84 meses.</span>';
+                return;
+            }
+
+            if (months > 84) {
+                feedback.innerHTML = '<span class="text-amber-700 font-medium">Este cuaderno cubre hasta los 84 meses (7 años).</span> Mostrando la última etapa disponible (72-84 meses).';
+                selectStage(DEVELOPMENT_STAGES.length - 1);
+                return;
+            }
+
+            // Buscar etapa correspondiente
+            let foundIndex = DEVELOPMENT_STAGES.findIndex(s => months >= s.minMonths && months < s.maxMonths);
+            if (foundIndex === -1 && months === 84) {
+                foundIndex = DEVELOPMENT_STAGES.length - 1;
+            }
+
+            if (foundIndex !== -1) {
+                const stage = DEVELOPMENT_STAGES[foundIndex];
+                const yearsText = months >= 12 ? ` (${Math.floor(months / 12)} año${Math.floor(months / 12) > 1 ? 's' : ''}${months % 12 > 0 ? ` y ${months % 12} m` : ''})` : '';
+                feedback.innerHTML = `
+                    <span class="font-semibold text-brand-800">Edad ingresada: ${months} meses${yearsText}</span> → Etapa sugerida: <strong>${stage.label}</strong>.
+                    <span class="block mt-1 text-[11px] text-slate-500">Recuerda explorar también la etapa anterior y siguiente para apreciar su ritmo individual.</span>
+                `;
+                selectStage(foundIndex);
+                if (appState.mainTab !== 'stage') {
+                    switchMainTab('stage');
+                }
+            }
+        }
+
+        function clearAgeInput() {
+            const input = document.getElementById('ageMonthsInput');
+            input.value = '';
+            handleAgeInput('');
+        }
+
+        // Toggle Panel de Neurodiversidad
+        function toggleNeuroPanel() {
+            const panel = document.getElementById('neurodiversityPanel');
+            const chevron = document.getElementById('neuroChevron');
+            panel.classList.toggle('hidden');
+            chevron.classList.toggle('rotate-180');
+        }
+
+        // =========================================================================
+        // 5. LÍNEA DE TIEMPO HORIZONTAL Y NAVEGACIÓN POR ETAPAS
+        // =========================================================================
+        function getStageStats(stage) {
+            let total = 0;
+            let achieved = 0;
+            let process = 0;
+
+            Object.keys(stage.areas).forEach(areaKey => {
+                const items = stage.areas[areaKey] || [];
+                items.forEach((_, idx) => {
+                    total++;
+                    const status = appState.checklist[`${stage.id}_${areaKey}_${idx}`];
+                    if (status === 'achieved') achieved++;
+                    else if (status === 'process') process++;
+                });
+            });
+
+            return {
+                total,
+                achieved,
+                process,
+                pending: total - achieved - process
+            };
+        }
+
+        function renderTimelineBar(shouldScrollIntoView = true) {
+            const container = document.getElementById('timelineBar');
+            if (!container) return;
+
+            const prevHorizontalScroll = container.scrollLeft;
+            container.innerHTML = '';
+
+            DEVELOPMENT_STAGES.forEach((stage, index) => {
+                const isSelected = index === appState.currentStageIndex;
+                const stats = getStageStats(stage);
+                const totalMarked = stats.achieved + stats.process;
+                const pct = stats.total > 0 ? Math.round((totalMarked / stats.total) * 100) : 0;
+
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.onclick = () => selectStage(index);
+                btn.id = `timeline-node-${index}`;
+                btn.className = `shrink-0 w-36 sm:w-40 p-3 rounded-xl border text-left transition-all flex flex-col justify-between ${
+                    isSelected
+                        ? 'bg-brand-600 text-white border-brand-700 shadow-md shadow-brand-600/20'
+                        : 'bg-slate-50/90 hover:bg-white text-slate-700 border-slate-200 hover:border-brand-300'
+                }`;
+
+                btn.innerHTML = `
+                    <div class="flex items-center justify-between gap-1">
+                        <span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider ${isSelected ? 'text-brand-100' : 'text-slate-400'}">
+                            <span>${stage.icon || '📅'}</span>
+                            <span>Etapa ${index + 1}</span>
+                        </span>
+                        <span id="timeline-badge-${index}" class="text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${
+                            totalMarked > 0
+                                ? (isSelected ? 'bg-white/25 text-white' : 'bg-emerald-100 text-emerald-800')
+                                : 'hidden'
+                        }">${totalMarked}/${stats.total}</span>
+                    </div>
+                    <div class="font-display font-bold text-sm mt-1.5">${stage.label}</div>
+                    <div class="text-[11px] truncate mt-0.5 ${isSelected ? 'text-brand-100' : 'text-slate-500'}">${stage.sublabel}</div>
+                    <div class="w-full h-1.5 rounded-full overflow-hidden mt-2 ${isSelected ? 'bg-brand-800/40' : 'bg-slate-200/80'}">
+                        <div id="timeline-progress-${index}" class="h-full transition-all duration-300 ${isSelected ? 'bg-amber-300' : 'bg-emerald-500'}" style="width: ${pct}%"></div>
+                    </div>
+                `;
+
+                container.appendChild(btn);
+            });
+
+            if (shouldScrollIntoView) {
+                setTimeout(() => {
+                    const activeNode = document.getElementById(`timeline-node-${appState.currentStageIndex}`);
+                    if (activeNode) {
+                        activeNode.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                    }
+                }, 40);
+            } else {
+                container.scrollLeft = prevHorizontalScroll;
+            }
+
+            const prevBtn = document.getElementById('prevStageBtn');
+            const nextBtn = document.getElementById('nextStageBtn');
+            if (prevBtn) prevBtn.disabled = appState.currentStageIndex === 0;
+            if (nextBtn) nextBtn.disabled = appState.currentStageIndex === DEVELOPMENT_STAGES.length - 1;
+        }
+
+        function updateTimelineNodeProgress(index) {
+            const stage = DEVELOPMENT_STAGES[index];
+            if (!stage) return;
+
+            const isSelected = index === appState.currentStageIndex;
+            const stats = getStageStats(stage);
+            const totalMarked = stats.achieved + stats.process;
+            const pct = stats.total > 0 ? Math.round((totalMarked / stats.total) * 100) : 0;
+
+            const badge = document.getElementById(`timeline-badge-${index}`);
+            const progress = document.getElementById(`timeline-progress-${index}`);
+
+            if (badge) {
+                if (totalMarked > 0) {
+                    badge.textContent = `${totalMarked}/${stats.total}`;
+                    badge.className = `text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${
+                        isSelected ? 'bg-white/25 text-white' : 'bg-emerald-100 text-emerald-800'
+                    }`;
+                } else {
+                    badge.className = 'hidden';
+                }
+            }
+
+            if (progress) {
+                progress.style.width = `${pct}%`;
+            }
+        }
+
+        function selectStage(index) {
+            if (index < 0 || index >= DEVELOPMENT_STAGES.length) return;
+            appState.currentStageIndex = index;
+            saveState();
+            renderTimelineBar(true);
+            renderCurrentStageContent();
+        }
+
+        function navigateStage(delta) {
+            selectStage(appState.currentStageIndex + delta);
+        }
+
+        // =========================================================================
+        // 6. RENDERIZADO DE CONTENIDO DE ETAPA Y CHECKLIST PUNTUAL (SIN SALTO DE SCROLL)
+        // =========================================================================
+        function renderAreaFilterPills() {
+            const container = document.getElementById('areaFilterPills');
+            if (!container) return;
+
+            const pills = [
+                { id: 'all', label: 'Todas las áreas (5)', icon: '✨' },
+                ...Object.values(AREAS_CONFIG).map(a => ({
+                    id: a.id,
+                    label: a.shortName,
+                    icon: a.icon
+                }))
+            ];
+
+            container.innerHTML = pills.map(pill => {
+                const isActive = appState.activeAreaFilter === pill.id;
+                return `
+                    <button type="button" onclick="setAreaFilter('${pill.id}')"
+                        class="px-3 py-1.5 rounded-xl text-xs font-medium transition-all flex items-center gap-1.5 border ${
+                            isActive
+                                ? 'bg-brand-600 text-white border-brand-700 shadow-sm'
+                                : 'bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200'
+                        }">
+                        <span>${pill.icon}</span>
+                        <span>${pill.label}</span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function setAreaFilter(areaId) {
+            appState.activeAreaFilter = areaId;
+            renderAreaFilterPills();
+            renderCurrentStageContent();
+        }
+
+        function renderCurrentStageContent() {
+            const stage = DEVELOPMENT_STAGES[appState.currentStageIndex];
+            if (!stage) return;
+
+            // Actualizar encabezado de etapa
+            document.getElementById('stageBadge').textContent = `Etapa ${appState.currentStageIndex + 1} de ${DEVELOPMENT_STAGES.length}`;
+            document.getElementById('stageEquivBadge').textContent = `${stage.icon || ''} ${stage.sublabel}`;
+            document.getElementById('stageTitle').textContent = stage.label;
+            document.getElementById('notesStageLabel').textContent = stage.label;
+
+            // Actualizar contadores
+            const stats = getStageStats(stage);
+            document.getElementById('statAchieved').textContent = stats.achieved;
+            document.getElementById('statProcess').textContent = stats.process;
+            document.getElementById('statPending').textContent = stats.pending;
+
+            // Actualizar guía contextual según rol
+            const guidanceBox = document.getElementById('roleGuidanceBox');
+            if (appState.viewMode === 'parents') {
+                guidanceBox.innerHTML = `
+                    <div class="flex items-start gap-2.5">
+                        <span class="text-lg leading-none">🏡</span>
+                        <div>
+                            <strong class="text-brand-800 font-semibold block mb-0.5">Orientación para Padres y Cuidadores (${stage.label}):</strong>
+                            <span>${stage.parentGuide}</span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                guidanceBox.innerHTML = `
+                    <div class="flex items-start gap-2.5">
+                        <span class="text-lg leading-none">🩺</span>
+                        <div>
+                            <strong class="text-brand-800 font-semibold block mb-0.5">Nota Técnica para Psicólogos en Formación (${stage.label}):</strong>
+                            <span>${stage.psychGuide}</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Cargar notas de esta etapa
+            const notesInput = document.getElementById('stageNotesInput');
+            if (notesInput) {
+                notesInput.value = appState.notes[stage.id] || '';
+            }
+
+            // Filtrar áreas y renderizar tarjetas
+            const searchQuery = (document.getElementById('stageSearchInput')?.value || '').trim().toLowerCase();
+            const areasContainer = document.getElementById('areasContainer');
+            areasContainer.innerHTML = '';
+
+            const areaKeys = appState.activeAreaFilter === 'all'
+                ? Object.keys(AREAS_CONFIG)
+                : [appState.activeAreaFilter];
+
+            let renderedCardsCount = 0;
+
+            areaKeys.forEach(areaKey => {
+                const areaMeta = AREAS_CONFIG[areaKey];
+                const rawItems = stage.areas[areaKey] || [];
+
+                const filteredItems = rawItems
+                    .map((text, originalIndex) => ({ text, originalIndex }))
+                    .filter(item => !searchQuery || item.text.toLowerCase().includes(searchQuery));
+
+                if (filteredItems.length === 0) return;
+                renderedCardsCount++;
+
+                const areaStats = getAreaStageStats(stage.id, areaKey, rawItems.length);
+                const tipText = appState.viewMode === 'parents' ? areaMeta.parentTip : areaMeta.psychTip;
+
+                const card = document.createElement('article');
+                card.className = `bg-white rounded-2xl border ${areaMeta.border} shadow-sm overflow-hidden flex flex-col`;
+                card.innerHTML = `
+                    <div class="${areaMeta.bgLight} px-4 sm:px-5 py-3.5 border-b ${areaMeta.border}">
+                        <div class="flex items-center justify-between gap-2">
+                            <h3 class="font-display font-bold text-base ${areaMeta.accentText} flex items-center gap-2">
+                                <span class="text-lg">${areaMeta.icon}</span>
+                                <span>${areaMeta.name}</span>
+                            </h3>
+                            <span id="area-counter-${stage.id}-${areaKey}" class="text-xs font-semibold px-2.5 py-0.5 rounded-full ${areaMeta.badgeBg} ${areaMeta.badgeText}">
+                                ${areaStats.marked}/${rawItems.length} registrados
+                            </span>
+                        </div>
+                        <p class="text-[11px] sm:text-xs text-slate-600 mt-1.5 leading-relaxed">
+                            ${tipText}
+                        </p>
+                    </div>
+                    <div class="p-4 sm:p-5 divide-y divide-slate-100 flex-1">
+                        ${filteredItems.map(item => renderChecklistItemHTML(stage.id, areaKey, item.originalIndex, item.text)).join('')}
+                    </div>
+                `;
+
+                areasContainer.appendChild(card);
+            });
+
+            if (renderedCardsCount === 0) {
+                areasContainer.innerHTML = `
+                    <div class="col-span-full bg-white rounded-2xl p-8 border border-slate-200 text-center text-slate-500 text-sm">
+                        No se encontraron conductas que coincidan con "<strong>${escapeHTML(searchQuery)}</strong>" en esta etapa.
+                    </div>
+                `;
+            }
+        }
+
+        function getAreaStageStats(stageId, areaKey, totalCount) {
+            let marked = 0;
+            for (let i = 0; i < totalCount; i++) {
+                const status = appState.checklist[`${stageId}_${areaKey}_${i}`];
+                if (status === 'achieved' || status === 'process') marked++;
+            }
+            return { marked, total: totalCount };
+        }
+
+        function renderChecklistItemHTML(stageId, areaKey, itemIndex, text) {
+            const key = `${stageId}_${areaKey}_${itemIndex}`;
+            const status = appState.checklist[key] || 'none';
+
+            let rowBg = 'hover:bg-slate-50/90';
+            let textStyle = 'text-slate-700';
+            let statusBadge = `
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-medium bg-slate-100 text-slate-500 border border-slate-200 group-hover:border-slate-300 transition-colors">
+                    <span class="w-2.5 h-2.5 rounded-full bg-slate-300"></span>
+                    <span>Sin marcar</span>
+                </span>
+            `;
+
+            if (status === 'achieved') {
+                rowBg = 'bg-emerald-50/50 hover:bg-emerald-50/80';
+                textStyle = 'text-slate-900 font-medium';
+                statusBadge = `
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200 transition-colors">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                        <span>Observado</span>
+                    </span>
+                `;
+            } else if (status === 'process') {
+                rowBg = 'bg-amber-50/50 hover:bg-amber-50/80';
+                textStyle = 'text-slate-900';
+                statusBadge = `
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-amber-100 text-amber-800 border border-amber-200 transition-colors">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                        <span>En proceso</span>
+                    </span>
+                `;
+            }
+
+            return `
+                <div id="checklist-item-${key}"
+                     onclick="cycleChecklistStatus('${stageId}', '${areaKey}', ${itemIndex})"
+                     role="button"
+                     tabindex="0"
+                     onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();cycleChecklistStatus('${stageId}', '${areaKey}', ${itemIndex});}"
+                     class="group py-3 px-2.5 -mx-2.5 rounded-xl flex items-start justify-between gap-3 cursor-pointer transition-colors select-none ${rowBg}">
+                    <span class="text-xs sm:text-sm leading-relaxed ${textStyle}">
+                        ${text}
+                    </span>
+                    <div class="shrink-0 mt-0.5">
+                        ${statusBadge}
+                    </div>
+                </div>
+            `;
+        }
+
+        function cycleChecklistStatus(stageId, areaKey, itemIndex) {
+            const currentScrollY = window.scrollY;
+            const key = `${stageId}_${areaKey}_${itemIndex}`;
+            const current = appState.checklist[key] || 'none';
+
+            if (current === 'none') {
+                appState.checklist[key] = 'achieved';
+            } else if (current === 'achieved') {
+                appState.checklist[key] = 'process';
+            } else {
+                delete appState.checklist[key];
+            }
+
+            saveState();
+
+            // 1. Actualización puntual únicamente del ítem modificado en el DOM
+            const itemEl = document.getElementById(`checklist-item-${key}`);
+            const stageIndex = DEVELOPMENT_STAGES.findIndex(s => s.id === stageId);
+            const stage = stageIndex !== -1 ? DEVELOPMENT_STAGES[stageIndex] : DEVELOPMENT_STAGES[appState.currentStageIndex];
+            const itemText = stage?.areas?.[areaKey]?.[itemIndex];
+
+            if (itemEl && typeof itemText === 'string') {
+                itemEl.outerHTML = renderChecklistItemHTML(stageId, areaKey, itemIndex, itemText);
+            }
+
+            // 2. Actualizar contador de la tarjeta del área correspondiente
+            if (stage && stage.areas[areaKey]) {
+                const totalAreaItems = stage.areas[areaKey].length;
+                const areaStats = getAreaStageStats(stageId, areaKey, totalAreaItems);
+                const areaCounterEl = document.getElementById(`area-counter-${stageId}-${areaKey}`);
+                if (areaCounterEl) {
+                    areaCounterEl.textContent = `${areaStats.marked}/${totalAreaItems} registrados`;
+                }
+            }
+
+            // 3. Actualizar contadores generales de la etapa y el badge/progreso en la línea de tiempo sin reconstruir
+            if (stage) {
+                const stats = getStageStats(stage);
+                document.getElementById('statAchieved').textContent = stats.achieved;
+                document.getElementById('statProcess').textContent = stats.process;
+                document.getElementById('statPending').textContent = stats.pending;
+                updateTimelineNodeProgress(stageIndex !== -1 ? stageIndex : appState.currentStageIndex);
+            }
+
+            // 4. Garantizar que la posición vertical de lectura permanezca intacta
+            if (window.scrollY !== currentScrollY) {
+                window.scrollTo({ top: currentScrollY, behavior: 'instant' });
+            }
+        }
+
+        // Guardar observaciones de la etapa
+        let noteTimeout = null;
+        function saveStageNote(text) {
+            const stage = DEVELOPMENT_STAGES[appState.currentStageIndex];
+            if (!stage) return;
+
+            if (text.trim() === '') {
+                delete appState.notes[stage.id];
+            } else {
+                appState.notes[stage.id] = text;
+            }
+            saveState();
+
+            const indicator = document.getElementById('notesSavedIndicator');
+            if (indicator) {
+                indicator.classList.remove('opacity-0');
+                clearTimeout(noteTimeout);
+                noteTimeout = setTimeout(() => {
+                    indicator.classList.add('opacity-0');
+                }, 1800);
+            }
+        }
+
+        // =========================================================================
+        // 7. LÍNEA DE TIEMPO LONGITUDINAL (0 A 7 AÑOS POR ÁREA)
+        // =========================================================================
+        function renderLongitudinalAreaSelector() {
+            const container = document.getElementById('longitudinalAreaSelector');
+            if (!container) return;
+
+            container.innerHTML = Object.values(AREAS_CONFIG).map(area => {
+                const isActive = appState.longitudinalArea === area.id;
+                return `
+                    <button type="button" onclick="selectLongitudinalArea('${area.id}')"
+                        class="px-3 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 border ${
+                            isActive
+                                ? `${area.badgeBg} ${area.badgeText} ${area.border} shadow-sm`
+                                : 'bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-200'
+                        }">
+                        <span>${area.icon}</span>
+                        <span>${area.shortName}</span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function selectLongitudinalArea(areaId) {
+            appState.longitudinalArea = areaId;
+            saveState();
+            renderLongitudinalAreaSelector();
+            renderLongitudinalTimeline();
+        }
+
+        function renderLongitudinalTimeline() {
+            const container = document.getElementById('longitudinalTimelineContent');
+            if (!container) return;
+
+            const areaMeta = AREAS_CONFIG[appState.longitudinalArea] || AREAS_CONFIG.cognoscitivo;
+
+            container.innerHTML = DEVELOPMENT_STAGES.map((stage, stageIdx) => {
+                const items = stage.areas[areaMeta.id] || [];
+                const areaStats = getAreaStageStats(stage.id, areaMeta.id, items.length);
+
+                return `
+                    <div class="relative pl-6 sm:pl-8">
+                        <!-- Nodo circular en la línea vertical -->
+                        <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full ${areaMeta.dot} ring-4 ring-white shadow-sm"></span>
+
+                        <div class="bg-slate-50/80 hover:bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/80 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-base">${stage.icon || '📅'}</span>
+                                    <h3 class="font-display font-bold text-base sm:text-lg text-slate-900">
+                                        ${stage.label}
+                                    </h3>
+                                    <span class="text-xs text-slate-500">(${stage.sublabel})</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full ${areaMeta.badgeBg} ${areaMeta.badgeText}">
+                                        ${areaStats.marked}/${items.length} observados
+                                    </span>
+                                    <button type="button" onclick="jumpToStageFromLongitudinal(${stageIdx})"
+                                        class="text-xs font-medium text-brand-700 hover:text-brand-800 bg-brand-50 hover:bg-brand-100 px-2.5 py-1 rounded-lg transition-colors">
+                                        Ir a esta etapa →
+                                    </button>
+                                </div>
+                            </div>
+
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                ${items.map((text, idx) => {
+                                    const status = appState.checklist[`${stage.id}_${areaMeta.id}_${idx}`] || 'none';
+                                    const dotColor = status === 'achieved'
+                                        ? 'bg-emerald-500'
+                                        : status === 'process'
+                                            ? 'bg-amber-400'
+                                            : 'bg-slate-300';
+                                    const textColor = status === 'achieved'
+                                        ? 'text-slate-900 font-medium'
+                                        : 'text-slate-700';
+
+                                    return `
+                                        <li class="flex items-start gap-2 text-xs sm:text-sm bg-white p-2.5 rounded-xl border border-slate-100">
+                                            <span class="w-2.5 h-2.5 rounded-full ${dotColor} shrink-0 mt-1.5"></span>
+                                            <span class="${textColor}">${text}</span>
+                                        </li>
+                                    `;
+                                }).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function jumpToStageFromLongitudinal(stageIdx) {
+            appState.activeAreaFilter = appState.longitudinalArea;
+            renderAreaFilterPills();
+            switchMainTab('stage');
+            selectStage(stageIdx);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // =========================================================================
+        // 8. BUSCADOR GLOBAL EN LAS 14 ETAPAS
+        // =========================================================================
+        function setGlobalSearch(term) {
+            const input = document.getElementById('globalSearchInput');
+            if (input) {
+                input.value = term;
+                performGlobalSearch(term);
+            }
+        }
+
+        function performGlobalSearch(query) {
+            const container = document.getElementById('globalSearchResults');
+            if (!container) return;
+
+            const cleanQuery = (query || '').trim().toLowerCase();
+            if (cleanQuery.length < 2) {
+                container.innerHTML = `
+                    <div class="text-center py-10 text-slate-400 text-sm">
+                        Escribe al menos 2 letras para buscar en las 14 etapas del cuaderno.
+                    </div>
+                `;
+                return;
+            }
+
+            const matches = [];
+            DEVELOPMENT_STAGES.forEach((stage, stageIndex) => {
+                Object.keys(stage.areas).forEach(areaKey => {
+                    const areaMeta = AREAS_CONFIG[areaKey];
+                    stage.areas[areaKey].forEach((text, itemIndex) => {
+                        if (text.toLowerCase().includes(cleanQuery)) {
+                            matches.push({
+                                stage,
+                                stageIndex,
+                                areaMeta,
+                                text,
+                                status: appState.checklist[`${stage.id}_${areaKey}_${itemIndex}`] || 'none'
+                            });
+                        }
+                    });
+                });
+            });
+
+            if (matches.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-10 text-slate-500 text-sm bg-slate-50 rounded-xl border border-slate-100">
+                        No se encontraron coincidencias para "<strong>${escapeHTML(query)}</strong>". Intenta con otra palabra clave.
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="text-xs font-semibold text-slate-500 mb-2">
+                    Se encontraron ${matches.length} conducta${matches.length === 1 ? '' : 's'} relacionada${matches.length === 1 ? '' : 's'}:
+                </div>
+                ${matches.map(m => `
+                    <div class="p-3.5 rounded-xl border border-slate-200 hover:border-brand-300 bg-slate-50/60 hover:bg-white transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div class="space-y-1">
+                            <div class="flex flex-wrap items-center gap-1.5">
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-bold bg-brand-100 text-brand-800">
+                                    ${m.stage.label}
+                                </span>
+                                <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold ${m.areaMeta.badgeBg} ${m.areaMeta.badgeText}">
+                                    ${m.areaMeta.icon} ${m.areaMeta.shortName}
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-slate-800">${m.text}</p>
+                        </div>
+                        <button type="button" onclick="jumpToStageFromSearch(${m.stageIndex}, '${m.areaMeta.id}')"
+                            class="shrink-0 text-xs font-semibold text-brand-700 bg-brand-50 hover:bg-brand-100 px-3 py-1.5 rounded-lg transition-colors">
+                            Ver en etapa →
+                        </button>
+                    </div>
+                `).join('')}
+            `;
+        }
+
+        function jumpToStageFromSearch(stageIndex, areaId) {
+            appState.activeAreaFilter = 'all';
+            renderAreaFilterPills();
+            switchMainTab('stage');
+            selectStage(stageIndex);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // =========================================================================
+        // 9. MODALES (DISCLAIMER, RESUMEN IMPRIMIBLE Y REINICIO)
+        // =========================================================================
+        function openDisclaimerModal() {
+            document.getElementById('disclaimerModal').classList.remove('hidden');
+        }
+
+        function closeDisclaimerModal() {
+            document.getElementById('disclaimerModal').classList.add('hidden');
+        }
+
+        function openSummaryModal() {
+            const container = document.getElementById('summaryContent');
+            const today = new Date().toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' });
+
+            let hasRecords = false;
+            let stagesHTML = '';
+
+            DEVELOPMENT_STAGES.forEach(stage => {
+                const stats = getStageStats(stage);
+                const note = appState.notes[stage.id] || '';
+                if (stats.achieved === 0 && stats.process === 0 && !note) return;
+
+                hasRecords = true;
+                let areasListHTML = '';
+
+                Object.keys(AREAS_CONFIG).forEach(areaKey => {
+                    const areaMeta = AREAS_CONFIG[areaKey];
+                    const items = stage.areas[areaKey] || [];
+                    const markedItems = [];
+
+                    items.forEach((text, idx) => {
+                        const status = appState.checklist[`${stage.id}_${areaKey}_${idx}`];
+                        if (status === 'achieved' || status === 'process') {
+                            markedItems.push({ text, status });
+                        }
+                    });
+
+                    if (markedItems.length > 0) {
+                        areasListHTML += `
+                            <div class="mt-2.5">
+                                <div class="text-xs font-bold ${areaMeta.accentText}">${areaMeta.icon} ${areaMeta.name}</div>
+                                <ul class="mt-1 space-y-1 pl-4 list-disc text-xs text-slate-700">
+                                    ${markedItems.map(mi => `
+                                        <li>
+                                            <span class="font-semibold ${mi.status === 'achieved' ? 'text-emerald-700' : 'text-amber-700'}">
+                                                [${mi.status === 'achieved' ? 'Observado' : 'En proceso'}]
+                                            </span>
+                                            ${mi.text}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        `;
+                    }
+                });
+
+                stagesHTML += `
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/70">
+                        <div class="flex items-center justify-between border-b border-slate-200 pb-2">
+                            <h4 class="font-display font-bold text-base text-slate-900">${stage.label} (${stage.sublabel})</h4>
+                            <span class="text-xs text-slate-600">
+                                Observados: <strong>${stats.achieved}</strong> • En proceso: <strong>${stats.process}</strong>
+                            </span>
+                        </div>
+                        ${areasListHTML}
+                        ${note ? `<div class="mt-3 p-2.5 rounded-lg bg-white border border-slate-200 text-xs"><strong>Observaciones:</strong> ${escapeHTML(note)}</div>` : ''}
+                    </div>
+                `;
+            });
+
+            if (!hasRecords) {
+                stagesHTML = `
+                    <div class="text-center py-8 bg-slate-50 rounded-xl border border-slate-200 text-slate-500">
+                        Aún no has marcado conductas ni escrito observaciones en ninguna etapa. Marca las habilidades observadas en el explorador para generar un reporte detallado.
+                    </div>
+                `;
+            }
+
+            container.innerHTML = `
+                <div class="bg-amber-50 border border-amber-200 p-3 rounded-xl text-xs text-amber-950">
+                    <strong>Nota orientativa (${today}):</strong> Registro basado en el cuaderno <em>"Calendario del Desarrollo Infantil"</em> de Margarita Ramos y Jorge Ramos. Herramienta de apoyo familiar y psicoeducativo; no constituye un diagnóstico clínico.
+                </div>
+                ${stagesHTML}
+            `;
+
+            document.getElementById('summaryModal').classList.remove('hidden');
+        }
+
+        function closeSummaryModal() {
+            document.getElementById('summaryModal').classList.add('hidden');
+        }
+
+        function copySummaryText() {
+            const contentEl = document.getElementById('summaryContent');
+            if (!contentEl) return;
+
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = contentEl.innerText;
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copySummaryBtn');
+                const origText = btn.textContent;
+                btn.textContent = '✓ ¡Texto copiado!';
+                setTimeout(() => { btn.textContent = origText; }, 2000);
+            } catch (e) {
+                console.warn('No se pudo copiar:', e);
+            }
+            document.body.removeChild(tempTextarea);
+        }
+
+        function resetAllProgress() {
+            document.getElementById('confirmResetModal').classList.remove('hidden');
+        }
+
+        function closeConfirmReset() {
+            document.getElementById('confirmResetModal').classList.add('hidden');
+        }
+
+        function executeResetAll() {
+            appState.checklist = {};
+            appState.notes = {};
+            saveState();
+            closeConfirmReset();
+            renderTimelineBar(false);
+            renderCurrentStageContent();
+            renderLongitudinalTimeline();
+        }
+
+        function escapeHTML(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+    </script>
+</body>
+</html>
